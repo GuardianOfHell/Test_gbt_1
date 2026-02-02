@@ -14,16 +14,30 @@
   </head>
   <body>
     <div class="page">
+      <header class="topbar">
+        <div class="topbar__content">
+          <p>БЕЗКОШТОВНА доставка від ₴799 · Новинка сезону: Maple Chili</p>
+          <button class="btn btn--ghost">Прайс для гурту</button>
+        </div>
+      </header>
+
       <header class="hero">
-        <nav class="nav">
+        <nav class="nav" id="home">
           <div class="logo">JERK<span>UP</span></div>
           <ul class="nav__links">
+            <li><a href="#home">Головна</a></li>
             <li><a href="#about">Про нас</a></li>
-            <li><a href="#flavors">Смаки</a></li>
+            <li><a href="#catalog">Каталог</a></li>
             <li><a href="#why">Чому ми</a></li>
             <li><a href="#order">Замовити</a></li>
           </ul>
-          <button class="btn btn--ghost">Запитати гуртом</button>
+          <div class="nav__actions">
+            <button class="btn btn--ghost">Запитати гуртом</button>
+            <div class="cart-pill">
+              <span>Кошик</span>
+              <strong data-cart-count>0</strong>
+            </div>
+          </div>
         </nav>
 
         <section class="hero__content">
@@ -36,7 +50,7 @@
             </p>
             <div class="hero__actions">
               <button class="btn btn--primary">Замовити набір</button>
-              <button class="btn btn--secondary">Переглянути меню</button>
+              <button class="btn btn--secondary">Переглянути каталог</button>
             </div>
             <div class="hero__stats">
               <div>
@@ -54,6 +68,18 @@
             </div>
           </div>
           <div class="hero__visual">
+            <div class="hero__media">
+              <div class="media-card">
+                <span>Live сушіння</span>
+                <h3>18 годин повільної сушки</h3>
+                <p>Контроль температури та вологості в режимі 24/7.</p>
+              </div>
+              <div class="media-card media-card--accent">
+                <span>New</span>
+                <h3>Maple Chili</h3>
+                <p>Солодкий клен + гострий післясмак.</p>
+              </div>
+            </div>
             <div class="card card--featured">
               <h3>Набір «Адреналін»</h3>
               <p>5 смаків · 350 г · гострий мікс</p>
@@ -96,31 +122,111 @@
         </div>
       </section>
 
-      <section id="flavors" class="section flavors">
+      <section id="catalog" class="section catalog">
         <div class="section__header">
-          <h2>Найпопулярніші смаки</h2>
-          <p>Спробуйте топові комбінації спецій, які обирають наші клієнти.</p>
+          <h2>Каталог джерок</h2>
+          <p>Оберіть готові сети або складіть власний мікс.</p>
         </div>
-        <div class="flavors__grid">
-          <article class="flavor">
-            <h3>Smoky BBQ</h3>
-            <p>Класичний копчений аромат з димними нотками.</p>
-            <span>₴159 / 50 г</span>
+        <div class="catalog__grid">
+          <article
+            class="product"
+            data-product
+            data-id="smoky-bbq"
+            data-name="Smoky BBQ"
+            data-note="Яловичина · 50 г · копчений аромат"
+            data-price="159"
+          >
+            <div class="product__media">
+              <span>ТОП</span>
+            </div>
+            <div>
+              <h3>Smoky BBQ</h3>
+              <p>Класичний копчений аромат з димними нотками.</p>
+              <ul>
+                <li>20 г білка</li>
+                <li>0 г цукру</li>
+                <li>50 г</li>
+              </ul>
+            </div>
+            <div class="product__actions">
+              <strong>₴159</strong>
+              <button class="btn btn--primary">Додати</button>
+            </div>
           </article>
-          <article class="flavor">
-            <h3>Chili Lime</h3>
-            <p>Пікантний удар чилі з освіжаючим лаймом.</p>
-            <span>₴169 / 50 г</span>
+          <article
+            class="product"
+            data-product
+            data-id="chili-lime"
+            data-name="Chili Lime"
+            data-note="Яловичина · 50 г · чилі + лайм"
+            data-price="169"
+          >
+            <div class="product__media product__media--lime">
+              <span>HOT</span>
+            </div>
+            <div>
+              <h3>Chili Lime</h3>
+              <p>Пікантний удар чилі з освіжаючим лаймом.</p>
+              <ul>
+                <li>21 г білка</li>
+                <li>1 г вуглеводів</li>
+                <li>50 г</li>
+              </ul>
+            </div>
+            <div class="product__actions">
+              <strong>₴169</strong>
+              <button class="btn btn--primary">Додати</button>
+            </div>
           </article>
-          <article class="flavor">
-            <h3>Honey Pepper</h3>
-            <p>Ніжний мед, перець і легка карамельна скоринка.</p>
-            <span>₴165 / 50 г</span>
+          <article
+            class="product"
+            data-product
+            data-id="honey-pepper"
+            data-name="Honey Pepper"
+            data-note="Яловичина · 50 г · мед + перець"
+            data-price="165"
+          >
+            <div class="product__media product__media--honey">
+              <span>NEW</span>
+            </div>
+            <div>
+              <h3>Honey Pepper</h3>
+              <p>Ніжний мед, перець і легка карамельна скоринка.</p>
+              <ul>
+                <li>19 г білка</li>
+                <li>2 г цукрів</li>
+                <li>50 г</li>
+              </ul>
+            </div>
+            <div class="product__actions">
+              <strong>₴165</strong>
+              <button class="btn btn--primary">Додати</button>
+            </div>
           </article>
-          <article class="flavor">
-            <h3>Teriyaki Fire</h3>
-            <p>Соєвий соус, імбир і солодка гострота.</p>
-            <span>₴175 / 50 г</span>
+          <article
+            class="product"
+            data-product
+            data-id="teriyaki-fire"
+            data-name="Teriyaki Fire"
+            data-note="Яловичина · 50 г · соя + імбир"
+            data-price="175"
+          >
+            <div class="product__media product__media--fire">
+              <span>🔥</span>
+            </div>
+            <div>
+              <h3>Teriyaki Fire</h3>
+              <p>Соєвий соус, імбир і солодка гострота.</p>
+              <ul>
+                <li>20 г білка</li>
+                <li>3 г вуглеводів</li>
+                <li>50 г</li>
+              </ul>
+            </div>
+            <div class="product__actions">
+              <strong>₴175</strong>
+              <button class="btn btn--primary">Додати</button>
+            </div>
           </article>
         </div>
       </section>
@@ -142,6 +248,25 @@
             <input type="email" placeholder="Ваш email" />
             <button class="btn btn--primary" type="submit">Отримати знижку</button>
           </form>
+        </div>
+      </section>
+
+      <section class="section cart" aria-live="polite">
+        <div class="section__header">
+          <h2>Ваш кошик</h2>
+          <p>Додавайте позиції з каталогу — кількість змінюється одразу тут.</p>
+        </div>
+        <div class="cart__panel">
+          <div class="cart__items" data-cart-items></div>
+          <div class="cart__summary">
+            <h3>Разом</h3>
+            <p>Доставка: від ₴59 · Безкоштовно від ₴799</p>
+            <div class="cart__total">
+              <span>Сума</span>
+              <strong data-cart-total>₴0</strong>
+            </div>
+            <button class="btn btn--primary">Оформити замовлення</button>
+          </div>
         </div>
       </section>
 
@@ -179,9 +304,10 @@
           <p>hello@jerkup.ua</p>
         </div>
         <div>
-          <button class="btn btn--secondary">Скачати прайс</button>
+          <button class="btn btn--secondary">Запросити дегустацію</button>
         </div>
       </footer>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
