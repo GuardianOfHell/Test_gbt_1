@@ -1,0 +1,61 @@
+.production_our_achievements_title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+    text-align: left;
+    margin-top: 60px;
+}
+
+.production_our_achievements_text {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 35px;
+    margin-bottom: 60px;
+}
+
+.production_our_achievements_cart_title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 59px;
+    text-align: left;
+}
+
+.production_our_achievements_cart_text {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+
+.production_our_achievements {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 25px 0 25px;
+}
+
+.production_our_achievements_cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.production_our_achievements_cart_k {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    margin: 0 30px 0 30px;
+}
