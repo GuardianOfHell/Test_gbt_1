@@ -1,85 +1,67 @@
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.core.paginator import Paginator
-from .models import *
+import logging
+from functools import wraps
+
 from django.shortcuts import render, get_object_or_404
 from django.db.models import F
 
+from .models import Services_and_Price_menu_list_item, Services_and_Price_product_item
 
-# from mysite.models import News_list, Services_and_Price_menu, Services_and_Price_menu_list_item
 
+logger = logging.getLogger(__name__)
+
+
+def with_page(default_page):
+    def decorator(view_func):
+        @wraps(view_func)
+        def wrapper(request, *args, **kwargs):
+            page_param = request.GET.get('page')
+            try:
+                page = int(page_param) if page_param is not None else default_page
+            except (TypeError, ValueError):
+                page = default_page
+            request.page = page
+            return view_func(request, *args, **kwargs)
+
+        return wrapper
+
+    return decorator
+
+@with_page(default_page=1)
 def index(request):
-    try:
-        page = int(request.GET.get('page'))
-    except:
-        page = None
-    print(page)
-    if page == None:
-        page = 1
     title = 'Головна'
     menu = Services_and_Price_menu_list_item.objects.all()
-    return render(request, 'mysite/index.html', {'title': title, 'page': page, 'menu': menu})
+    return render(request, 'mysite/index.html', {'title': title, 'page': request.page, 'menu': menu})
 
+@with_page(default_page=5)
 def contact(request):
-    try:
-        page = int(request.GET.get('page'))
-    except:
-        page = None
-    print(page)
-    if page == None:
-        page = 5
     title = 'Контакти'
-    return render(request, 'mysite/index.html', {'title': title, 'page': page})
+    return render(request, 'mysite/index.html', {'title': title, 'page': request.page})
 
+@with_page(default_page=3)
 def production(request):
-    try:
-        page = int(request.GET.get('page'))
-    except:
-        page = None
-    print(page)
-    if page == None:
-        page = 3
     title = 'Виробництво'
-    return render(request, 'mysite/index.html', {'title': title, 'page': page})
+    return render(request, 'mysite/index.html', {'title': title, 'page': request.page})
 
+@with_page(default_page=4)
 def Delivery_and_payment(request):
-    try:
-        page = int(request.GET.get('page'))
-    except:
-        page = None
-    print(page)
-    if page == None:
-        page = 4
     title = 'Доставка та оплата'
-    return render(request, 'mysite/index.html', {'title': title, 'page': page})
+    return render(request, 'mysite/index.html', {'title': title, 'page': request.page})
 
+@with_page(default_page=6)
 def project(request):
-    try:
-        page = int(request.GET.get('page'))
-    except:
-        page = None
-    print(page)
-    if page == None:
-        page = 6
     title = 'Проекти'
-    return render(request, 'mysite/index.html', {'title': title, 'page': page})
+    return render(request, 'mysite/index.html', {'title': title, 'page': request.page})
 
+@with_page(default_page=2)
 def catalog(request):
     title = 'Каталог'
     menu = Services_and_Price_menu_list_item.objects.all()
     try:
-        page = int(request.GET.get('page'))
-    except:
-        page = None
-    print(page)
-    if page == None:
-        page = 2
-    try:
         which_catalog = int(request.GET.get('which_catalog'))
-    except:
+    except (TypeError, ValueError):
         which_catalog = None
-    print(which_catalog)
-    if which_catalog == None:
+        logger.warning("Invalid which_catalog parameter: %s", request.GET.get('which_catalog'))
+    if which_catalog is None:
         which_catalog = 1
     goods = (
         Services_and_Price_product_item.objects
@@ -90,20 +72,23 @@ def catalog(request):
     for g in goods:
         g.sizes_list = [s.strip() for s in (g.Size or "").split("|") if s.strip()]
     # <-- /ДОДАЙ
-    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+    return render(
+        request,
+        'mysite/index.html',
+        {
+            'title': title,
+            'menu': menu,
+            'which_catalog': int(which_catalog),
+            'page': request.page,
+            'goods': goods,
+        },
+    )
 
 
+@with_page(default_page=1)
 def Product_card(request):
     # Отримуємо id товару з GET-параметра '?t='
     product_id = request.GET.get('t')
-
-    # Ваша логіка для отримання сторінки
-    try:
-        page = int(request.GET.get('page'))
-    except (ValueError, TypeError):  # Більш надійна перевірка на помилку
-        page = 1
-
-    print(page)  # Ваш print для відладки
 
     # --- Ключова зміна ---
     # Використовуємо get_object_or_404 - це стандартний і найнадійніший
@@ -120,12 +105,10 @@ def Product_card(request):
     title = 'Товар'
     menu = Services_and_Price_menu_list_item.objects.all()
 
-    print(goods)  # Ваш print для відладки
-
     # Формуємо контекст для передачі в шаблон
     context = {
         'title': title,
-        'page': page,
+        'page': request.page,
         'menu': menu,
         'goods': goods,
     }

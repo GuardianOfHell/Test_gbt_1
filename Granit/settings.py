@@ -21,17 +21,27 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#x^9du2se+f7qzz8@ldia3x+g2da7(2iw88f1-kzp*hp^wlh)!'
+SECRET_KEY = os.getenv(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-#x^9du2se+f7qzz8@ldia3x+g2da7(2iw88f1-kzp*hp^wlh)!'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-debug_file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'DEBUG.txt')
-# Перевіряємо наявність файлу DEBUG.txt і встановлюємо значення DEBUG
-if os.path.exists(debug_file_path):
-    DEBUG = True
-else:
-    DEBUG = False
+DEBUG = os.getenv('DJANGO_DEBUG', '').lower() in ('1', 'true', 'yes', 'on')
 
-ALLOWED_HOSTS = ['192.168.0.183', 'localhost', '127.0.0.1', '192.168.0.107', 'garant-bud.pl', 'www.garant-bud.pl', '192.168.0.47']
+allowed_hosts_env = os.getenv('DJANGO_ALLOWED_HOSTS')
+if allowed_hosts_env:
+    ALLOWED_HOSTS = [host.strip() for host in allowed_hosts_env.split(',') if host.strip()]
+else:
+    ALLOWED_HOSTS = [
+        '192.168.0.183',
+        'localhost',
+        '127.0.0.1',
+        '192.168.0.107',
+        'garant-bud.pl',
+        'www.garant-bud.pl',
+        '192.168.0.47',
+    ]
 
 
 # Application definition
@@ -81,40 +91,20 @@ WSGI_APPLICATION = 'Granit.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-debug_file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'DEBUG.txt')
-# Перевіряємо наявність файлу DEBUG.txt і встановлюємо значення DEBUG
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'test.db',
-#     }
-# }
-
-if os.path.exists(debug_file_path):
-    DATABASES = {
-        'default': {
-            # 'ENGINE': 'mysql.connector.django',
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'Granit',
-            'USER': 'jf94XM5pH2GaV88DGkzk8U7nr6C77fGj',
-            'PASSWORD': '263457MKp5MkPXtVzxCFx2nnUNy9hb75',
-            'HOST': '10.8.0.1',
-            'PORT': '3306'
-        }
+DATABASES = {
+    'default': {
+        # 'ENGINE': 'mysql.connector.django',
+        'ENGINE': os.getenv('DJANGO_DB_ENGINE', 'django.db.backends.mysql'),
+        'NAME': os.getenv('DJANGO_DB_NAME', 'Granit'),
+        'USER': os.getenv('DJANGO_DB_USER', 'jf94XM5pH2GaV88DGkzk8U7nr6C77fGj'),
+        'PASSWORD': os.getenv('DJANGO_DB_PASSWORD', '263457MKp5MkPXtVzxCFx2nnUNy9hb75'),
+        'HOST': os.getenv(
+            'DJANGO_DB_HOST',
+            '10.8.0.1' if DEBUG else '192.168.0.19'
+        ),
+        'PORT': os.getenv('DJANGO_DB_PORT', '3306'),
     }
-else:
-    DATABASES = {
-        'default': {
-            # 'ENGINE': 'mysql.connector.django',
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'Granit',
-            'USER': 'jf94XM5pH2GaV88DGkzk8U7nr6C77fGj',
-            'PASSWORD': '263457MKp5MkPXtVzxCFx2nnUNy9hb75',
-            'HOST': '192.168.0.19',
-            'PORT': '3306'
-        }
-    }
+}
 
 
 # Password validation
