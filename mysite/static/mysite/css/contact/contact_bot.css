@@ -110,3 +110,19 @@
         padding: 0 25px 0 25px;
     }
 }
+
+@media (max-width: 600px) {
+    .contact_bot_map {
+        height: 320px;
+        margin: 40px 0;
+    }
+
+    .contact_bot_right {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    .contact_bot_right_top_text {
+        margin-bottom: 60px;
+    }
+}

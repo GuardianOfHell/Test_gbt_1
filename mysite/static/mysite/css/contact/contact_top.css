@@ -156,3 +156,30 @@
     color: rgb(255 255 255);
 
 }
+
+@media (max-width: 900px) {
+    .contact_top_cart {
+        padding: 60px 20px;
+        margin: 40px 0;
+    }
+
+    .contact_top_cart_left,
+    .contact_top_cart_right {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .contact_top_cart_right .contact_top_cart_right_cart {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact_top_cart_left_title,
+    .contact_top_cart_right_title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}

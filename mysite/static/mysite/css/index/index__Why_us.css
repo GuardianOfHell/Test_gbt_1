@@ -152,6 +152,22 @@
     }
 }
 
+@media (max-width: 900px) {
+    .Why_us_block {
+        margin-top: 60px;
+    }
+
+    .Why_us_block_too {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .Why_us_block_left,
+    .Why_us_block_right {
+        width: 100%;
+    }
+}
+
 .Why_us_block_text {
     opacity: 0; /* Початкова непрозорість */
     transform: translateX(-100px); /* Зсув вліво */
