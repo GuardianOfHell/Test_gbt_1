@@ -1,5 +1,4 @@
 from django.db import models
-import os
 from django.db.models import F
 
 class Services_and_Price_menu_list_item(models.Model):
@@ -7,12 +6,8 @@ class Services_and_Price_menu_list_item(models.Model):
     img = models.FileField(upload_to='Services_and_Price_menu_list_item/', verbose_name='Зображення')
 
     def delete(self, *args, **kwargs):
-        # Удаление изображения, если оно существует
         if self.img:
-            try:
-                os.remove(self.img.path)  # Удаление файла изображения с диска
-            except FileNotFoundError:
-                pass  # Если файл уже был удалён, ничего не делать
+            self.img.delete(save=False)
         super().delete(*args, **kwargs)  # Вызов метода удаления объекта
 
     def __str__( self ):
@@ -53,12 +48,8 @@ class Services_and_Price_product_item(models.Model):
     Description = models.TextField (verbose_name='Опис товару')
     priority = models.PositiveIntegerField(null=True, blank=True, db_index=True, verbose_name="Пріоритет")
     def delete(self, *args, **kwargs):
-        # Удаление изображения, если оно существует
         if self.img:
-            try:
-                os.remove(self.img.path)  # Удаление файла изображения с диска
-            except FileNotFoundError:
-                pass  # Если файл уже был удалён, ничего не делать
+            self.img.delete(save=False)
         super().delete(*args, **kwargs)  # Вызов метода удаления объекта
 
     def __str__( self ):

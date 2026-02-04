@@ -6,7 +6,7 @@ from mysite.views import *
 
 urlpatterns = [
     path('', index, name='index'),
-    path('contact', contact, name='contact'),
+    path('contact/', contact, name='contact'),
     path('production/', production, name='production'),
     path('Delivery-and-payment/', Delivery_and_payment, name='Delivery_and_payment'),
     path('project/', project, name='project'),

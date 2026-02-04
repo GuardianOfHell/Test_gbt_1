@@ -62,6 +62,9 @@
 .cart_galerea_bloc_ob_buy {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
 
 }
 
@@ -78,7 +81,7 @@
     justify-content: center;
 }
 
-юcatalog_plate_right_cart_product_vid {
+.catalog_plate_right_cart_product_vid {
     color: rgb(0, 0, 0);
     font-family: Montserrat;
     font-size: 18px;
@@ -101,4 +104,11 @@
     background-color: rgba(226, 179, 61, 0.68); /* Новий колір фону */
     transition: background-color 0.3s ease, color 0.3s ease; /* Плавний перехід */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь */
+}
+
+@media (max-width: 520px) {
+    .cart_galerea_bloc_ob {
+        margin: 16px 0;
+        padding: 16px;
+    }
 }

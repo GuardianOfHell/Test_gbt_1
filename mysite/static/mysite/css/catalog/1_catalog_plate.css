@@ -3,7 +3,8 @@
     border: 1px solid rgb(68, 68, 68);
     border-radius: 8px;
     background: rgb(147, 147, 147);
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     height: 56px;
     color: rgb(255, 255, 255);
     font-family: Montserrat;
@@ -68,8 +69,9 @@
 }
 
 .catalog_plate_right_cart_product img {
-    width: 280px; /* Фіксована ширина */
-    height: 320px; /* Фіксована висота */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 7 / 8;
     object-fit: cover; /* Зберігає пропорції, обрізаючи зображення */
     border-radius: 8px; /* Опціонально: додає закруглені кути */
 }
@@ -128,10 +130,11 @@
 
 .catalog_plate_right_cart {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 320px); /* Фіксована ширина плашок */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px; /* Фіксована відстань між плашками */
     /*justify-content: center; !* Вирівнювання по центру *!*/
     width: 100%;
+    justify-items: center;
 }
 
 .catalog_plate_right_cart::after {
@@ -172,5 +175,11 @@
     }
     .catalog_plate_right_cart{
         justify-content: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .catalog_plate {
+        padding: 0 20px;
     }
 }
