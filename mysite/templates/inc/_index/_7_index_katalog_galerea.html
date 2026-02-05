@@ -91,6 +91,11 @@
             slideShadows: false
         },
         breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 12,
+                centeredSlides: false
+            },
             576: {
                 slidesPerView: 'auto',
                 spaceBetween: 0,
@@ -121,7 +126,14 @@
                 const width = sliderItem.getBoundingClientRect().width;
                 const height = sliderItem.getBoundingClientRect().height;
 
-                $('.item-bg').addClass('active');
+                const x = sliderItem.getBoundingClientRect().left + window.scrollX;
+                const y = sliderItem.getBoundingClientRect().top + window.scrollY;
+                const width = sliderItem.getBoundingClientRect().width;
+                const height = sliderItem.getBoundingClientRect().height;
+
+                if (window.innerWidth > 800) {
+                    $('.item-bg').addClass('active');
+                }
 
                 bg.style.width = width + 'px';
                 bg.style.height = height + 'px';
@@ -156,7 +168,14 @@
             const width = sliderItem.getBoundingClientRect().width;
             const height = sliderItem.getBoundingClientRect().height;
 
-            $('.item-bg').addClass('active');
+            const x = sliderItem.getBoundingClientRect().left + window.scrollX;
+            const y = sliderItem.getBoundingClientRect().top + window.scrollY;
+            const width = sliderItem.getBoundingClientRect().width;
+            const height = sliderItem.getBoundingClientRect().height;
+
+            if (window.innerWidth > 800) {
+                $('.item-bg').addClass('active');
+            }
 
             bg.style.width = width + 'px';
             bg.style.height = height + 'px';
