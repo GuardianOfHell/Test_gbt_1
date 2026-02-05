@@ -315,12 +315,12 @@
     }
 
     .wrapper_tooler .news__img img {
+        display: block;
         max-width: 100%;
         border-radius: 10px;
-        height: 100%;
         width: 100%;
-        max-height: 210px;
-        object-fit: cover
+        height: 100%;
+        object-fit: cover;
     }
 
     .wrapper_tooler .news-slider__item {
