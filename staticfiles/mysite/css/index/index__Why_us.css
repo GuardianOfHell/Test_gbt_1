@@ -168,3 +168,33 @@
     font-weight: bold;
     font-size: 54px;
 }
+
+@media (max-width: 900px) {
+    .Why_us_title {
+        font-size: 34px;
+        line-height: 1.2;
+        text-align: center;
+        padding: 32px 16px 0;
+    }
+
+    .Why_us_title_nad {
+        text-align: center;
+        padding-top: 32px;
+    }
+
+    .Why_us_block {
+        margin-top: 40px;
+    }
+
+    .Why_us_block_text_count {
+        font-size: 36px;
+        line-height: 1;
+        margin-right: 12px;
+    }
+
+    .Why_us_block_text_right_block_title,
+    .Why_us_block_text_right_block_text {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}

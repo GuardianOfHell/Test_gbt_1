@@ -49,53 +49,39 @@
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    var bg = document.querySelector('.item-bg');
-    var items = document.querySelectorAll('.news__item');
-    var item = document.querySelector('.news__item');
-
-    function cLog(content) {
-        console.log(content)
-    }
+    const bg = document.querySelector('.item-bg');
 
     if ($(window).width() > 800) {
-        $(document).on("mouseover", ".news__item", function (_event, _element) {
+        $(document).on("mouseenter", ".news__item", function () {
+            const x = this.getBoundingClientRect().left + window.scrollX;
+            const y = this.getBoundingClientRect().top + window.scrollY;
+            const width = this.getBoundingClientRect().width;
+            const height = this.getBoundingClientRect().height;
 
-            var newsItem = document.querySelectorAll('.news__item');
-            newsItem.forEach(function (element, index) {
-                element.addEventListener('mouseover', function () {
-                    var x = this.getBoundingClientRect().left + window.scrollX;
-                    var y = this.getBoundingClientRect().top + window.scrollY;
-                    var width = this.getBoundingClientRect().width;
-                    var height = this.getBoundingClientRect().height;
+            $('.item-bg').addClass('active');
+            $('.news__item').removeClass('active');
 
-                    $('.item-bg').addClass('active');
-                    $('.news__item').removeClass('active');
-                    // $('.news__item').removeClass('active');
+            if (bg) {
+                bg.style.width = width + 'px';
+                bg.style.height = height + 'px';
+                bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
+            }
+        });
 
-                    bg.style.width = width + 'px';
-                    bg.style.height = height + 'px';
-                    bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
-                });
-
-                element.addEventListener('mouseleave', function () {
-                    $('.item-bg').removeClass('active');
-                    $('.news__item').removeClass('active');
-                });
-
-            });
-
+        $(document).on("mouseleave", ".news__item", function () {
+            $('.item-bg').removeClass('active');
+            $('.news__item').removeClass('active');
         });
     }
 
-
-    var swiper = new Swiper('.news-slider', {
+    const swiper = new Swiper('.news-slider', {
         effect: 'coverflow',
         grabCursor: true,
         loop: true,
         centeredSlides: true,
         keyboard: true,
-        spaceBetween: 0,
-        slidesPerView: 'auto',
+        spaceBetween: 16,
+        slidesPerView: 1,
         speed: 300,
         coverflowEffect: {
             rotate: 0,
@@ -105,7 +91,8 @@
             slideShadows: false
         },
         breakpoints: {
-            480: {
+            576: {
+                slidesPerView: 'auto',
                 spaceBetween: 0,
                 centeredSlides: true
             }
@@ -121,14 +108,18 @@
         },
         on: {
             init: function () {
-                var activeItem = document.querySelector('.swiper-slide-active');
-                var sliderItem = activeItem.querySelector('.news__item');
+                const activeItem = document.querySelector('.swiper-slide-active');
+                const sliderItem = activeItem ? activeItem.querySelector('.news__item') : null;
                 $('.swiper-slide-active .news__item').addClass('active');
 
-                var x = sliderItem.getBoundingClientRect().left + window.scrollX;
-                var y = sliderItem.getBoundingClientRect().top + window.scrollY;
-                var width = sliderItem.getBoundingClientRect().width;
-                var height = sliderItem.getBoundingClientRect().height;
+                if (!sliderItem || !bg) {
+                    return;
+                }
+
+                const x = sliderItem.getBoundingClientRect().left + window.scrollX;
+                const y = sliderItem.getBoundingClientRect().top + window.scrollY;
+                const width = sliderItem.getBoundingClientRect().width;
+                const height = sliderItem.getBoundingClientRect().height;
 
                 $('.item-bg').addClass('active');
 
@@ -150,16 +141,20 @@
 
     swiper.on('slideChangeTransitionEnd', function () {
         $('.news__item').removeClass('active');
-        var activeItem = document.querySelector('.swiper-slide-active');
-        var sliderItem = activeItem.querySelector('.news__item');
+        const activeItem = document.querySelector('.swiper-slide-active');
+        const sliderItem = activeItem ? activeItem.querySelector('.news__item') : null;
 
         setTimeout(function () {
             $('.swiper-slide-active .news__item').addClass('active');
 
-            var x = sliderItem.getBoundingClientRect().left + window.scrollX;
-            var y = sliderItem.getBoundingClientRect().top + window.scrollY;
-            var width = sliderItem.getBoundingClientRect().width;
-            var height = sliderItem.getBoundingClientRect().height;
+            if (!sliderItem || !bg) {
+                return;
+            }
+
+            const x = sliderItem.getBoundingClientRect().left + window.scrollX;
+            const y = sliderItem.getBoundingClientRect().top + window.scrollY;
+            const width = sliderItem.getBoundingClientRect().width;
+            const height = sliderItem.getBoundingClientRect().height;
 
             $('.item-bg').addClass('active');
 
@@ -168,5 +163,4 @@
             bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
         }, 100);
     });
-
 </script>
