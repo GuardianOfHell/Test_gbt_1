@@ -126,6 +126,11 @@
                 const width = sliderItem.getBoundingClientRect().width;
                 const height = sliderItem.getBoundingClientRect().height;
 
+                const x = sliderItem.getBoundingClientRect().left + window.scrollX;
+                const y = sliderItem.getBoundingClientRect().top + window.scrollY;
+                const width = sliderItem.getBoundingClientRect().width;
+                const height = sliderItem.getBoundingClientRect().height;
+
                 if (window.innerWidth > 800) {
                     $('.item-bg').addClass('active');
                 }
@@ -157,6 +162,11 @@
             if (!sliderItem || !bg) {
                 return;
             }
+
+            const x = sliderItem.getBoundingClientRect().left + window.scrollX;
+            const y = sliderItem.getBoundingClientRect().top + window.scrollY;
+            const width = sliderItem.getBoundingClientRect().width;
+            const height = sliderItem.getBoundingClientRect().height;
 
             const x = sliderItem.getBoundingClientRect().left + window.scrollX;
             const y = sliderItem.getBoundingClientRect().top + window.scrollY;
