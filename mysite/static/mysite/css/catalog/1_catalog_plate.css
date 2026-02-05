@@ -1,0 +1,176 @@
+.catalog_plate_left_menu_plashka {
+    box-sizing: border-box;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 8px;
+    background: rgb(147, 147, 147);
+    width: 320px;
+    height: 56px;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.catalog_plate_left_menu_plashka_lll {
+    background: rgb(68, 68, 68);
+}
+
+.catalog_plate_left_menu_plashka::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(68, 68, 68);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.catalog_plate_left_menu_plashka:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.catalog_plate_left_menu_plashka:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(68, 68, 68, 0.85);
+}
+
+.catalog_plate_left_menu_vvv {
+    background: rgb(147, 147, 147);
+}
+
+.catalog_plate_right_cart_product {
+    box-sizing: border-box;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 16px;
+    box-shadow: 4px 4px 34px 0px rgba(0, 0, 0, 0.11);
+    background: rgb(247, 247, 247);
+    width: 100%;
+    max-width: 320px;
+    min-height: 560px;
+    padding: 20px;
+    margin: 0 10px 10px 10px;
+}
+
+.catalog_plate_right_cart_product img {
+    width: 280px; /* Фіксована ширина */
+    height: 320px; /* Фіксована висота */
+    object-fit: cover; /* Зберігає пропорції, обрізаючи зображення */
+    border-radius: 8px; /* Опціонально: додає закруглені кути */
+}
+.catalog_plate_right_cart_product .product-image {
+    object-fit: cover; /* Щоб зображення заповнювало контейнер */
+    transition: transform 0.3s ease; /* Плавний ефект */
+}
+.catalog_plate_right_cart_product .product-image:hover {
+    transform: scale(1.5); /* Збільшення зображення */
+    border: 1px solid rgba(0, 0, 0, 0.49); /* Біла рамка */
+    box-sizing: border-box; /* Щоб рамка не зміщувала розміри зображення */
+}
+
+.catalog_plate_right_cart_product_title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.catalog_plate_right_cart_product_vid {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+.catalog_plate_right_cart_product_button {
+    color: rgb(56, 56, 56);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    width: 147px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.catalog_plate_right_cart {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+.catalog_plate_right_cart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 320px); /* Фіксована ширина плашок */
+    gap: 20px; /* Фіксована відстань між плашками */
+    /*justify-content: center; !* Вирівнювання по центру *!*/
+    width: 100%;
+}
+
+.catalog_plate_right_cart::after {
+    content: '';
+    width: 100%;
+    height: 0;
+    order: 1; /* Додаємо порядок, щоб псевдоелемент був останнім */
+}
+
+.catalog_plate {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 120px 0 120px;
+    align-items: flex-start;
+}
+
+.catalog_plate_left_menu{
+    margin-right: 20px;
+}
+
+@media (max-width: 1250px) {
+    .catalog_plate {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .catalog_plate_left_menu_plashka {
+        margin: 20px;
+    }
+
+    .catalog_plate_left_menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+    }
+    .catalog_plate_right_cart{
+        justify-content: center;
+    }
+}

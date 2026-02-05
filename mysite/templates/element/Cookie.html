@@ -1,0 +1,96 @@
+{% load static %}
+<!-- Cookie Banner -->
+<div id="cookieBanner" class="cookie-banner">
+    <div class="cookie-container">
+        <div class="cookie-text">
+            <p>Używamy plików cookie do zapewnienia prawidłowego działania strony (niezbędne), analizy (statystyki) i marketingu. Szczegóły w <a href="{% url 'cookie' %}">Polityce Cookies</a>.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button class="btn btn-primary" onclick="cookieConsent.acceptAll()">Akceptuj wszystkie</button>
+            <button class="btn btn-secondary" onclick="cookieConsent.rejectNonEssential()">Odrzuć nieistotne</button>
+            <button class="btn btn-outline" onclick="cookieConsent.openSettings()">Ustawienia</button>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Settings Modal -->
+<div id="cookieModal" class="cookie-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Ustawienia Cookies</h2>
+            <button class="modal-close" onclick="cookieConsent.closeSettings()">&times;</button>
+        </div>
+        <div class="modal-body">
+            
+            <!-- Niezbędne -->
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h3 class="category-title">Niezbędne</h3>
+                    <div class="category-status">
+                        <span class="status-text">Zawsze włączone</span>
+                        <div class="toggle-switch disabled active">
+                            <div class="toggle-slider"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="category-description">
+                    Te pliki cookie są niezbędne do prawidłowego funkcjonowania strony i nie można ich wyłączyć. Zapewniają podstawowe funkcje, takie jak nawigacja po stronie i dostęp do bezpiecznych obszarów.
+                </p>
+            </div>
+
+            <!-- Analityczne -->
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h3 class="category-title">Analityczne (Statystyki)</h3>
+                    <div class="category-status">
+                        <span class="status-text" id="analyticsStatus">Wyłączone</span>
+                        <div class="toggle-switch" id="analyticsToggle" onclick="cookieConsent.toggleCategory('analytics')">
+                            <div class="toggle-slider"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="category-description">
+                    Pomagają nam zrozumieć, w jaki sposób odwiedzający wchodzą w interakcję ze stroną, zbierając i raportując informacje anonimowo. Używamy Google Analytics i podobnych narzędzi.
+                </p>
+            </div>
+
+            <!-- Marketingowe -->
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h3 class="category-title">Marketingowe</h3>
+                    <div class="category-status">
+                        <span class="status-text" id="marketingStatus">Wyłączone</span>
+                        <div class="toggle-switch" id="marketingToggle" onclick="cookieConsent.toggleCategory('marketing')">
+                            <div class="toggle-slider"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="category-description">
+                    Służą do śledzenia odwiedzających na stronach internetowych w celu wyświetlania odpowiednich i angażujących reklam. Mogą być ustawiane przez naszych partnerów reklamowych.
+                </p>
+            </div>
+
+            <!-- Funkcjonalne -->
+            <div class="cookie-category">
+                <div class="category-header">
+                    <h3 class="category-title">Funkcjonalne</h3>
+                    <div class="category-status">
+                        <span class="status-text" id="functionalStatus">Wyłączone</span>
+                        <div class="toggle-switch" id="functionalToggle" onclick="cookieConsent.toggleCategory('functional')">
+                            <div class="toggle-slider"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="category-description">
+                    Umożliwiają stronie zapamiętanie wyborów dokonanych przez użytkownika (np. nazwa użytkownika, język, region) w celu zapewnienia lepszej funkcjonalności.
+                </p>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="cookieConsent.rejectNonEssential()">Odrzuć nieistotne</button>
+            <button class="btn btn-outline" onclick="cookieConsent.savePreferences()">Zapisz preferencje</button>
+            <button class="btn btn-primary" onclick="cookieConsent.acceptAll()">Akceptuj wszystkie</button>
+        </div>
+    </div>
+</div>
