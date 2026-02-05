@@ -1,0 +1,173 @@
+.index_our_advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.index_our_advantages .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 710px;
+}
+
+.index_our_advantages h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.index_our_advantages p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.index_our_advantages a.zoomed p {
+    -webkit-line-clamp: unset;
+}
+
+.index_our_advantages a.zoomed .card-inner {
+    overflow: auto;
+}
+
+.index_our_advantages a.opacity-0 {
+    opacity: 0;
+}
+
+.index_our_advantages .overflow {
+    overflow: hidden;
+}
+
+.index_our_advantages .overflow .background {
+    opacity: 0 !important;
+}
+
+.index_our_advantages .background {
+    background-color: rgb(226, 180, 59);
+    border-radius: 20px;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.index_our_advantages .card-wraper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: space-between;
+}
+
+.index_our_advantages a.card {
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+}
+
+.index_our_advantages .card-main {
+    border: 1px solid rgb(226, 180, 59);
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.index_our_advantages .card:hover .card-main {
+    position: relative;
+    z-index: 20;
+}
+
+.index_our_advantages .card-inner {
+    position: relative;
+    z-index: 50;
+    height: 100%;
+}
+
+.index_our_advantages .card-inner div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.index_our_advantages img {
+    height: 100%;
+    width: 100%;
+}
+
+.index_our_advantages_title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1199px) {
+    .index_our_advantages .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .index_our_advantages .container {
+        max-width: 720px;
+        display: block;
+    }
+
+    .index_our_advantages .card-wraper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .index_our_advantages .container {
+        max-width: 520px;
+    }
+
+    .index_our_advantages .card-wraper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .index_our_advantages .card-main {
+        padding: 30px 20px;
+    }
+
+    .index_our_advantages a.card {
+        padding: 6px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .index_our_advantages .container {
+        max-width: 100%;
+    }
+
+    .index_our_advantages .card-wraper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .index_our_advantages .card-main {
+        padding: 40px;
+    }
+
+    .index_our_advantages a.card {
+        padding: 10px;
+    }
+}

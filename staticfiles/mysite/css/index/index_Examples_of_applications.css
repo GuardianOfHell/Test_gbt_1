@@ -1,0 +1,38 @@
+.index_Examples_of_applications {
+    margin: 90px 120px 90px 120px;
+}
+
+.owl-carousel .item {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Щоб перекрити основне зображення */
+}
+
+.owl_carousel_h1_title {
+    border-bottom: solid 1px #E2B43B;
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 80px;
+    padding-bottom: 5px;
+}
+
+.owl-carousel .owl-item img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    .index_Examples_of_applications {
+        margin: 90px 20px 0 20px;
+    }
+}

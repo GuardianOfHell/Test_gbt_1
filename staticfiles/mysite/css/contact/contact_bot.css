@@ -1,0 +1,112 @@
+.contact_bot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_bot_right {
+    width: 100%;
+    max-width: 380px;
+}
+
+.contact_bot_right_top_title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.contact_bot_right_top_text {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 120px;
+}
+
+.contact_bot_right_bot_title {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.contact_bot_right_bot_text {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.contact_bot_right_top {
+    max-width: 376px;
+    width: 100%;
+}
+
+.contact_bot_right_bot_tabel_row {
+    display: flex;
+    width: 100%;
+    max-width: 200px;
+    justify-content: space-between;
+    background: rgb(231, 231, 231);
+    padding: 10px;
+}
+
+.contact_bot_right_bot_tabel_row_alt {
+    background: rgb(176, 176, 176);
+}
+
+.contact_bot_right_bot_tabel_row_col {
+
+}
+
+.contact_bot_map {
+    margin: 90px 50px 90px 50px;
+}
+
+@media (max-width: 1321px) {
+    .contact_top_cart {
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .contact_bot_map {
+        width: 100%;
+        height: 600px;
+    }
+
+    .contact_bot {
+        flex-direction: column;
+    }
+
+    .contact_bot_left {
+        width: 100%;
+    }
+
+    .contact_bot_map {
+        margin: 90px 0 90px 0;
+    }
+    .contact_bot_right{
+        margin-bottom: 90px;
+    }
+}
+
+@media (max-width: 880px) {
+    .contact_bot_map {
+        height: 400px;
+    }
+    .contact_bot_right{
+        padding: 0 25px 0 25px;
+    }
+}

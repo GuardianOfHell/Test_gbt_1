@@ -1,0 +1,2030 @@
+2025-02-13 21:47:15,322 - ERROR - 
+----------------------
+
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 17, in index
+    return render(request, 'mysite/index.html', {'title': title, 'page': page})
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 573, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 13: 'static'. Did you forget to register or load this tag?
+2025-02-13 21:47:15,337 - ERROR - 
+----------------------
+
+
+"GET /?page=1 HTTP/1.1" 500 215974
+2025-02-28 10:48:03,056 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: mysite_services_and_price_menu_list_item
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 80, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: mysite_services_and_price_menu_list_item
+2025-02-28 10:48:03,126 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 245419
+2025-02-28 10:48:16,691 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such table: mysite_services_and_price_menu_list_item
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 80, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such table: mysite_services_and_price_menu_list_item
+2025-02-28 10:48:16,699 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 247012
+2025-02-28 17:40:44,117 - ERROR - 
+----------------------
+
+
+Internal Server Error: /d9i45Aga7sFMzBK9639Lb8fXMjhB9T4v/admin/mysite/services_and_price_product_item/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'Granit.mysite_services_and_price_product_item' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\options.py", line 866, in get_changelist_instance
+    return ChangeList(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\views\main.py", line 146, in __init__
+    self.get_results(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\views\main.py", line 313, in get_results
+    result_count = paginator.count
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'Granit.mysite_services_and_price_product_item' doesn't exist")
+2025-02-28 17:40:44,197 - ERROR - 
+----------------------
+
+
+"GET /d9i45Aga7sFMzBK9639Lb8fXMjhB9T4v/admin/mysite/services_and_price_product_item/ HTTP/1.1" 500 223679
+2025-02-28 17:44:02,100 - ERROR - 
+----------------------
+
+
+Internal Server Error: /d9i45Aga7sFMzBK9639Lb8fXMjhB9T4v/admin/mysite/services_and_price_product_item/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'Granit.mysite_services_and_price_product_item' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\options.py", line 718, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\sites.py", line 241, in inner
+    return view(request, *args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\options.py", line 2001, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\options.py", line 866, in get_changelist_instance
+    return ChangeList(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\views\main.py", line 146, in __init__
+    self.get_results(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\contrib\admin\views\main.py", line 313, in get_results
+    result_count = paginator.count
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'Granit.mysite_services_and_price_product_item' doesn't exist")
+2025-02-28 17:44:02,176 - ERROR - 
+----------------------
+
+
+"GET /d9i45Aga7sFMzBK9639Lb8fXMjhB9T4v/admin/mysite/services_and_price_product_item/ HTTP/1.1" 500 223492
+2025-04-02 09:53:26,088 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Мой диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'Product_card' not found. 'Product_card' is not a valid view function or pattern name.
+2025-04-02 09:53:26,100 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 233646
+2025-04-02 09:55:24,320 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\Мой диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'Product_card' not found. 'Product_card' is not a valid view function or pattern name.
+2025-04-02 09:55:24,323 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 233646
+2025-04-02 10:16:10,224 - ERROR - 
+----------------------
+
+
+Internal Server Error: /Product_card/
+Traceback (most recent call last):
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view mysite.views.Product_card didn't return an HttpResponse object. It returned None instead.
+2025-04-02 10:16:10,227 - ERROR - 
+----------------------
+
+
+"GET /Product_card/?t=1 HTTP/1.1" 500 68816
+2025-04-02 10:16:18,457 - ERROR - 
+----------------------
+
+
+Internal Server Error: /Product_card/
+Traceback (most recent call last):
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\User_1\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view mysite.views.Product_card didn't return an HttpResponse object. It returned None instead.
+2025-04-02 10:16:18,458 - ERROR - 
+----------------------
+
+
+"GET /Product_card/?t=4 HTTP/1.1" 500 68816
+2025-07-11 02:45:41,195 - ERROR - 
+----------------------
+
+
+Internal Server Error: /Product_card/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 97, in Product_card
+    return render(request, 'mysite/index.html', {'title': title, 'page': page, 'menu': menu})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 573, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 68: 'static'. Did you forget to register or load this tag?
+2025-07-11 02:45:41,201 - ERROR - 
+----------------------
+
+
+Internal Server Error: /Product_card/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 97, in Product_card
+    return render(request, 'mysite/index.html', {'title': title, 'page': page, 'menu': menu})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 573, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 68: 'static'. Did you forget to register or load this tag?
+2025-07-11 02:45:41,257 - ERROR - 
+----------------------
+
+
+"GET /Product_card/?t=1 HTTP/1.1" 500 213326
+2025-07-11 16:22:35,869 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+2025-07-11 16:22:35,935 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 288695
+2025-07-11 16:25:45,796 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+2025-07-11 16:25:45,849 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 288832
+2025-07-11 16:26:55,361 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+2025-07-11 16:26:55,403 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 288832
+2025-07-11 16:27:08,255 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+2025-07-11 16:27:08,268 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 288709
+2025-07-11 16:30:34,009 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+2025-07-11 16:30:34,056 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 288846
+2025-07-11 16:31:07,837 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Size' in 'field list'")
+2025-07-11 16:31:07,881 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 288846
+2025-07-11 16:54:49,403 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Product_availability_id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Product_availability_id' in 'field list'")
+2025-07-11 16:54:49,447 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 289568
+2025-07-11 16:54:56,312 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Product_availability_id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Product_availability_id' in 'field list'")
+2025-07-11 16:54:56,323 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 289417
+2025-07-11 16:57:24,773 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Product_availability_id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 82, in catalog
+    return render(request, 'mysite/index.html', {'title': title, 'menu': menu, 'which_catalog': int(which_catalog), 'page': page, 'goods': goods})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 210, in render
+    return template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 173, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\MySQLdb\connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'mysite_services_and_price_product_item.Product_availability_id' in 'field list'")
+2025-07-11 16:57:24,815 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 289417
+2025-07-13 04:05:07,532 - ERROR - 
+----------------------
+
+
+Internal Server Error: /Product_card/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+KeyError: 'char_filters'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 97, in Product_card
+    return render(request, 'mysite/index.html', {'title': title, 'page': page, 'menu': menu, 'goods':goods})
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader_tags.py", line 199, in render
+    template = context.template.engine.select_template(template_name)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\engine.py", line 208, in select_template
+    return self.get_template(template_name)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'char_filters' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+2025-07-13 04:05:07,578 - ERROR - 
+----------------------
+
+
+"GET /Product_card/?t=3 HTTP/1.1" 500 237204
+2025-07-13 04:22:58,993 - ERROR - 
+----------------------
+
+
+Internal Server Error: /Product_card/
+Traceback (most recent call last):
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\mysite\views.py", line 117, in Product_card
+    return render(request, 'mysite/Product_card.html', context)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "H:\Мій диск\5_Project\Pay_Case\Granit\Granit_pol_l\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: mysite/Product_card.html
+2025-07-13 04:22:59,012 - ERROR - 
+----------------------
+
+
+"GET /Product_card/?t=1 HTTP/1.1" 500 89184
+2025-12-17 22:36:47,385 - ERROR - 
+----------------------
+
+
+Internal Server Error: /catalog/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/mysite/views.py", line 86, in catalog
+    .order_by(F("priority").asc(nulls_last=True), "id")
+NameError: name 'F' is not defined
+2025-12-17 22:36:47,390 - ERROR - 
+----------------------
+
+
+"GET /catalog/?page=2 HTTP/1.1" 500 58270
+2025-12-19 10:31:48,006 - ERROR - 
+----------------------
+
+
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/base/base.py", line 279, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/base/base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 256, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to server on '10.8.0.1' (115)")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/app/mysite/views.py", line 21, in index
+    return render(request, 'mysite/index.html', {'title': title, 'page': page, 'menu': menu})
+  File "/usr/local/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 1008, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/usr/local/lib/python3.10/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.10/site-packages/django/template/defaulttags.py", line 199, in render
+    len_values = len(values)
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/usr/local/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1572, in execute_sql
+    cursor = self.connection.cursor()
+  File "/usr/local/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/base/base.py", line 320, in cursor
+    return self._cursor()
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/base/base.py", line 296, in _cursor
+    self.ensure_connection()
+  File "/usr/local/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/base/base.py", line 278, in ensure_connection
+    with self.wrap_database_errors:
+  File "/usr/local/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/base/base.py", line 279, in ensure_connection
+    self.connect()
+  File "/usr/local/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/base/base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/usr/local/lib/python3.10/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 256, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+django.db.utils.OperationalError: (2002, "Can't connect to server on '10.8.0.1' (115)")
+2025-12-19 10:31:48,023 - ERROR - 
+----------------------
+
+
+"GET / HTTP/1.1" 500 342569
