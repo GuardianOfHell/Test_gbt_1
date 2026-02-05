@@ -1,4 +1,5 @@
 .background_form_f {
+    padding: 0 16px;
     background-image: url('../../img/index/Feedback_form/Feedback_form_fon.png'); /* Замість 'your-background-image.jpg' вставте ваш шлях до зображення */
     background-size: cover;
     background-position: center;
@@ -65,15 +66,15 @@
 
 /* Адаптивність */
 @media (max-width: 600px) {
-    .background_form_f .overlay {
+    .background_form_f .overlay_f {
         padding: 20px; /* Зменшити відступи на менших екранах */
     }
 
-    .background_form_f .title {
+    .background_form_f .title_f {
         font-size: 24px; /* Зменшити шрифт заголовка */
     }
 
-    .background_form_f .description {
+    .background_form_f .description_f {
         font-size: 14px; /* Зменшити шрифт опису */
     }
 
