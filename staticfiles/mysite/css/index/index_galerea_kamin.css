@@ -2,12 +2,12 @@
 
 .main_kamin_gov {
     position: relative;
-    /*width: calc(min(90rem, 90%));*/
     margin: 0 auto;
     column-gap: 3rem;
     padding-block: min(20vh, 3rem);
-    margin: 0 120px 0 120px;
-    height: 1000px;
+    margin: 0 120px;
+    min-height: 1000px;
+    height: auto;
 }
 
 .main_kamin_gov .bg {
@@ -271,5 +271,21 @@
     }
     .main_kamin_gov .fgvbhj{
         font-size: 14px;
+    }
+}
+
+@media (max-width: 700px) {
+    .main_kamin_gov {
+        margin: 0 16px;
+        padding-block: 40px;
+    }
+
+    .main_kamin_gov .swiper {
+        padding-top: 1.5rem;
+    }
+
+    .main_kamin_gov .swiper-slide {
+        width: 85vw;
+        max-width: 320px;
     }
 }
