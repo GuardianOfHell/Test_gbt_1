@@ -26,9 +26,19 @@
         opacity: 1;
     }
 
+    .wrapper_tooler {
+        position: relative;
+        width: 100%;
+        overflow-x: clip;
+    }
+
     .wrapper_tooler .news-slider {
         z-index: 2;
         max-width: 1300px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 12px;
+        overflow: hidden;
         margin-left: auto;
         margin-right: auto;
         margin-top: 60px;
@@ -72,13 +82,19 @@
     }
 
     .wrapper_tooler .news-slider__item {
-        width: 400px;
+        width: min(400px, calc(100vw - 48px));
         flex-shrink: 0;
     }
 
     @media screen and (max-width: 992px) {
         .wrapper_tooler .news-slider__item {
-            width: 340px;
+            width: min(340px, calc(100vw - 48px));
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .wrapper_tooler .news-slider__item {
+            width: calc(100vw - 40px);
         }
     }
 
@@ -304,30 +320,7 @@
         object-fit: cover
     }
 
-    .wrapper_tooler .news-slider__item {
-        width: 100%; /* Устанавливаем ширину на 100% для мобильных устройств */
-        max-width: 400px; /* Ограничиваем максимальную ширину для слайдов */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto; /* Центрируем слайды */
-    }
-
-
-
-    .wrapper_tooler .news__img {
-        width: 100%; /* Занимаем всю ширину контейнера */
-        height: auto; /* Убираем фиксированную высоту, чтобы изображение сохраняло пропорции */
-        object-fit: cover; /* Масштабируем изображение по контейнеру */
-    }
-
-
-
     @media screen and (max-width: 576px) {
-        .wrapper_tooler .news-slider__item {
-            max-width: 300px; /* Ограничиваем ширину на мобильных */
-        }
-
         .wrapper_tooler .item-bg {
             top: 0;
             left: 0;
