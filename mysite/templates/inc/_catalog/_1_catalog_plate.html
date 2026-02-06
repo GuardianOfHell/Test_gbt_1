@@ -165,7 +165,7 @@
         {% for item in goods %}
         <div class="catalog_plate_right_cart_product">
             <!-- Використовуємо URL зображення з моделі -->
-            <img src="{{ item.img.url }}" alt="{{ item.Title }}" class="product-image">
+            <img src="{{ item.img.url }}" alt="{{ item.Title }}" class="product-image" loading="lazy" decoding="async">
             <h1 class="catalog_plate_right_cart_product_title">{{ item.Title }}</h1>
             <div style="display: flex;">
                 <p class="catalog_plate_right_cart_product_vid">{{ item.price }}</p>
