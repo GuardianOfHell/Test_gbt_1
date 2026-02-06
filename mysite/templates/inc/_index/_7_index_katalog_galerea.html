@@ -31,8 +31,7 @@
             obowiązujących norm technicznych.
         </p>
     </div>
-</div>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</section>
 <script>
     var bg = document.querySelector('.item-bg');
     var isDesktop = window.matchMedia('(min-width: 801px)').matches;
@@ -110,6 +109,7 @@
                 $('.swiper-slide-active .news__item').addClass('active');
                 updateBackgroundPosition(sliderItem);
             }
+            return;
         }
     });
 
