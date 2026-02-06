@@ -17,6 +17,11 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    transform: none;
+}
+
+.katalog_about_block__inner[data-animate] {
     opacity: 0;
     transform: translateY(20px);
 }
@@ -111,141 +116,6 @@
         padding: 20px 16px;
     }
 
-    .wrapper_tooler .item-bg.active {
-        left: 0;
-        top: 0;
-        opacity: 1;
-    }
-
-    .wrapper_tooler {
-        position: relative;
-        width: 100%;
-        overflow-x: clip;
-    }
-
-    .wrapper_tooler .news-slider {
-        z-index: 2;
-        max-width: 1300px;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0 12px;
-        overflow: hidden;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 60px;
-    }
-
-    @media screen and (max-width: 1300px) {
-        .wrapper_tooler .news-slider {
-            max-width: 1000px;
-        }
-    }
-
-    @media screen and (max-width: 1150px) {
-        .wrapper_tooler .news-slider {
-            max-width: 800px;
-        }
-    }
-
-    @media screen and (max-width: 800px) {
-        .wrapper_tooler .news-slider {
-            max-width: 600px;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        .wrapper_tooler .news-slider {
-            max-width: 350px;
-        }
-    }
-
-    @media screen and (max-width: 576px) {
-        .wrapper_tooler .news-slider {
-            margin-top: 45px;
-        }
-    }
-
-    .wrapper_tooler .news-slider__wrp {
-        display: flex;
-        align-items: flex-start;
-        position: relative;
-        z-index: 2;
-    }
-
-    .wrapper_tooler .news-slider__item {
-        width: min(400px, calc(100vw - 48px));
-        flex-shrink: 0;
-    }
-
-    @media screen and (max-width: 992px) {
-        .wrapper_tooler .news-slider__item {
-            width: min(340px, calc(100vw - 48px));
-        }
-    }
-
-    @media screen and (max-width: 576px) {
-        .wrapper_tooler .news-slider__item {
-            width: calc(100vw - 40px);
-        }
-    }
-
-    .wrapper_tooler .news-slider__item.swiper-slide {
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.3s;
-    }
-
-.katalog_about_block__inner p {
-    margin: 0;
-    color: rgb(255, 255, 255);
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-.katalog_about_block__inner p + p {
-    margin-top: 18px;
-}
-
-@media (max-width: 1400px) {
-    .katalog_about_block__inner {
-        max-width: 1140px;
-        padding: 32px 34px;
-    }
-
-    .katalog_about_block__inner p {
-        font-size: 19px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .katalog_about_block {
-        padding: 24px 14px 8px;
-    }
-
-    .katalog_about_block__inner {
-        border-radius: 16px;
-        padding: 28px 24px;
-    }
-
-    .katalog_about_block__inner p {
-        font-size: 18px;
-        line-height: 1.55;
-    }
-}
-
-@media (max-width: 700px) {
-    .katalog_about_block {
-        padding: 18px 10px 6px;
-    }
-
-    .katalog_about_block__inner {
-        border-radius: 12px;
-        padding: 20px 16px;
-    }
-
     .katalog_about_block__inner p {
         font-size: 16px;
         line-height: 1.5;
@@ -257,39 +127,7 @@
         padding-left: 12px;
     }
 
-    .wrapper_tooler .news__img {
-        border-radius: 10px;
-        box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25);
-        height: 200px;
-        margin-top: 30px;
-        width: 100%;
-        transition: all 0.3s;
-        transform-origin: 0% 0%;
-    }
-
-    @media screen and (max-width: 576px) {
-        .wrapper_tooler .news__img {
-            height: 180px;
-            margin-top: 20px;
-        }
-    }
-
-    .wrapper_tooler .news__img img {
-        max-width: 100%;
-        border-radius: 10px;
-        height: 100%;
-        width: 100%;
-        max-height: 210px;
-        object-fit: cover
-    }
-
-    @media screen and (max-width: 576px) {
-        .wrapper_tooler .item-bg {
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: none;
-        }
+    .katalog_about_block__inner p + p {
+        margin-top: 14px;
     }
 }
