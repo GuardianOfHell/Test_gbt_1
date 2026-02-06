@@ -1,20 +1,108 @@
-.katalog_about_block {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 28px 16px 10px;
-    box-sizing: border-box;
-}
+    .wrapper_tooler .icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: currentColor;
+    }
 
-.katalog_about_block__inner {
-    width: 100%;
-    max-width: 1320px;
-    border: 1px solid rgb(226, 180, 59);
-    border-radius: 18px;
-    background: rgb(56, 56, 56);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-    padding: 36px 44px;
-}
+    .wrapper_tooler .item-bg {
+        width: 300px;
+        height: 500px;
+        position: absolute;
+        top: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        transition: all 0.3s;
+        left: -30px;
+    }
+
+    .wrapper_tooler .item-bg.active {
+        left: 0;
+        top: 0;
+        opacity: 1;
+    }
+
+    .wrapper_tooler {
+        position: relative;
+        width: 100%;
+        overflow-x: clip;
+    }
+
+    .wrapper_tooler .news-slider {
+        z-index: 2;
+        max-width: 1300px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 12px;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+
+    @media screen and (max-width: 1300px) {
+        .wrapper_tooler .news-slider {
+            max-width: 1000px;
+        }
+    }
+
+    @media screen and (max-width: 1150px) {
+        .wrapper_tooler .news-slider {
+            max-width: 800px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .wrapper_tooler .news-slider {
+            max-width: 600px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .wrapper_tooler .news-slider {
+            max-width: 350px;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .wrapper_tooler .news-slider {
+            margin-top: 45px;
+        }
+    }
+
+    .wrapper_tooler .news-slider__wrp {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        z-index: 2;
+    }
+
+    .wrapper_tooler .news-slider__item {
+        width: min(400px, calc(100vw - 48px));
+        flex-shrink: 0;
+    }
+
+    @media screen and (max-width: 992px) {
+        .wrapper_tooler .news-slider__item {
+            width: min(340px, calc(100vw - 48px));
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .wrapper_tooler .news-slider__item {
+            width: calc(100vw - 40px);
+        }
+    }
+
+    .wrapper_tooler .news-slider__item.swiper-slide {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+    }
 
 .katalog_about_block__inner p {
     margin: 0;
@@ -73,7 +161,64 @@
         text-align: left;
     }
 
-    .katalog_about_block__inner p + p {
-        margin-top: 14px;
+    .wrapper_tooler .news__title {
+        font-size: 25px;
+        font-weight: 500;
+        opacity: 0.7;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        transition: opacity 0.3s;
+        height: 50px;
+    }
+
+    @media screen and (max-width: 576px) {
+        .wrapper_tooler .news__title {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .wrapper_tooler .news__txt {
+        margin: 10px 0;
+        line-height: 1.6em;
+        font-size: 15px;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+
+    .wrapper_tooler .news__img {
+        border-radius: 10px;
+        box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25);
+        height: 200px;
+        margin-top: 30px;
+        width: 100%;
+        transition: all 0.3s;
+        transform-origin: 0% 0%;
+    }
+
+    @media screen and (max-width: 576px) {
+        .wrapper_tooler .news__img {
+            height: 180px;
+            margin-top: 20px;
+        }
+    }
+
+    .wrapper_tooler .news__img img {
+        max-width: 100%;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        max-height: 210px;
+        object-fit: cover
+    }
+
+    @media screen and (max-width: 576px) {
+        .wrapper_tooler .item-bg {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: none;
+        }
     }
 }
