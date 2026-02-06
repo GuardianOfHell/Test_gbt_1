@@ -2,23 +2,26 @@
     position: relative;
     display: block;
     width: 100%;
-    margin: 0 auto; /* Центрируем блок */
+    margin: 0 auto;
 }
 
 .video-block_index .video-overlay {
-    position: relative; /* Положение относительно контента */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     width: 100%;
-    height: auto;
+    min-height: 520px;
+    background: #121212;
 }
 
 .video-block_index video {
     display: block;
     width: 100%;
-    height: auto; /* Автоматическая высота для масштабирования */
+    height: 100%;
+    min-height: 520px;
+    object-fit: cover;
 }
 
 .video-block_index .video-content {
@@ -27,9 +30,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff; /* Белый текст поверх видео */
+    color: #fff;
     text-align: center;
-    z-index: 2; /* Выводим контент поверх видео */
+    z-index: 2;
+    padding: 60px 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .video-block_index .video-title {
@@ -44,11 +50,8 @@
 .video-block_index .video-overlay::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Затемнение видео */
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -57,7 +60,7 @@
     font-family: Montserrat;
     font-size: 96px;
     font-weight: 900;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-align: center;
     margin-left: -800px;
     margin-bottom: 100px;
@@ -74,6 +77,17 @@
     width: 100%;
     max-width: 660px;
     margin-left: 1000px;
+}
+
+.video-block_index .video-overlay.video-fallback {
+    background: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
+    url('/static/mysite/img/content/main/logo.png') center / contain no-repeat,
+    #121212;
+}
+
+.video-block_index .video-overlay.video-fallback video {
+    opacity: 0;
+    visibility: hidden;
 }
 
 @media (max-width: 1700px) {
@@ -99,7 +113,7 @@
 @media (max-width: 1100px) {
     .video-block_index .video-title {
         margin-left: 0;
-        font-size: 48px
+        font-size: 48px;
     }
 
     .video-block_index .video-description {
@@ -111,6 +125,11 @@
 }
 
 @media (max-width: 820px) {
+    .video-block_index .video-overlay,
+    .video-block_index video {
+        min-height: 680px;
+    }
+
     .video-block_index .video-title {
         font-size: 36px;
         margin-bottom: 35px;
@@ -119,24 +138,20 @@
     .video-block_index .video-description {
         font-size: 16px;
         max-width: 100%;
-        padding: 0 20px 0 20px;
+        padding: 0 20px;
     }
 }
 
 @media (max-width: 650px) {
-    .video-block_index .video-overlay{
-        height: 800px;
-    }
-    .video-block_index video{
-        width: auto;
+    .video-block_index .video-overlay,
+    .video-block_index video {
+        min-height: 800px;
     }
 }
 
 @media (max-width: 360px) {
-    .video-block_index .video-overlay{
-        height: 850px;
-    }
-    .video-block_index video{
-        width: auto;
+    .video-block_index .video-overlay,
+    .video-block_index video {
+        min-height: 850px;
     }
 }

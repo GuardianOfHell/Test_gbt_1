@@ -285,14 +285,39 @@ Adres magazyn i produkcja: 73-131 Krąpiel, 1B, Polska</p>
 
 <!-- Initialize Swiper -->
 <script>
-    var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
+    var isDesktopProductGallery = window.matchMedia('(min-width: 992px)');
+
+    function getProductGalleryOptions() {
+        var isDesktop = isDesktopProductGallery.matches;
+
+        return {
+            direction: isDesktop ? 'vertical' : 'horizontal',
+            slidesPerView: 1,
+            spaceBetween: isDesktop ? 30 : 16,
+            mousewheel: isDesktop,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        };
+    }
+
+    var swiper = new Swiper('.mySwiper', getProductGalleryOptions());
+
+    isDesktopProductGallery.addEventListener('change', function () {
+        var isDesktop = isDesktopProductGallery.matches;
+
+        swiper.changeDirection(isDesktop ? 'vertical' : 'horizontal');
+        swiper.params.spaceBetween = isDesktop ? 30 : 16;
+
+        if (swiper.mousewheel) {
+            if (isDesktop) {
+                swiper.mousewheel.enable();
+            } else {
+                swiper.mousewheel.disable();
+            }
+        }
+
+        swiper.update();
     });
 </script>
