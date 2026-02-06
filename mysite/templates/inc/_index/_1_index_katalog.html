@@ -1,13 +1,13 @@
 {% load static %}
 <section class="katalog_bloc_index">
+    <div class="katalog_bloc_index_bot">
+        {% include 'inc/_index/_7_index_katalog_galerea.html' %}
+    </div>
     <div class="katalog_bloc_index_top">
         <div class="katalog_bloc_index_top_linia lef"></div>
         <a href="{% url 'catalog' %}">
             <button class="katalog_bloc_index_top_button">Katalog</button>
         </a>
         <div class="katalog_bloc_index_top_linia rig"></div>
-    </div>
-    <div class="katalog_bloc_index_bot">
-        {% include 'inc/_index/_7_index_katalog_galerea.html' %}
     </div>
 </section>
