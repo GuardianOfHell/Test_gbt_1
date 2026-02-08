@@ -2,54 +2,54 @@
 <nav>
     <div class="navbar-container">
         <div class="navbar-left">
-            <img src="{% static '/mysite/img/content/main/logo.png' %}" alt="Logo firmy" class="logo"/>
+            <img src="{% static '/mysite/img/content/main/logo.png' %}" alt="Логотип компанії" class="logo"/>
             <div class="navbar-left-hide">
                 <a href="#" class="contact-item">
-                    Masz pytanie?
+                    Маєте запитання?
                 </a>
                 <a href="tel:+48575766613" class="contact-item">
-                    <img src="{% static '/mysite/img/element/navbar/telephone.png' %}" alt="Telefon firmy" class="navbar_img"/>
+                    <img src="{% static '/mysite/img/element/navbar/telephone.png' %}" alt="Телефон компанії" class="navbar_img"/>
                     +48575766613
                 </a>
                 <a href="mailto:Garantbud86@gmail.com" class="contact-item">
-                    <img src="{% static '/mysite/img/element/navbar/envelope.png' %}" alt="Koperta firmy" class="navbar_img"/>
+                    <img src="{% static '/mysite/img/element/navbar/envelope.png' %}" alt="Електронна пошта компанії" class="navbar_img"/>
                     Garantbud86@gmail.com
                 </a>
             </div>
         </div>
         <nav class="navbar-right">
             {% if page == 1 %}
-                <a href="{% url 'index' %}?page=1" style="border-bottom: 1px solid #fff;">Strona główna</a>
+                <a href="{% url 'index' %}?page=1" style="border-bottom: 1px solid #fff;">Головна</a>
             {% else %}
-                <a href="{% url 'index' %}?page=1">Strona główna</a>
+                <a href="{% url 'index' %}?page=1">Головна</a>
             {% endif %}
             {% if page == 2 %}
-                <a href="{% url 'catalog' %}?page=2" style="border-bottom: 1px solid #fff;">Katalog</a>
+                <a href="{% url 'catalog' %}?page=2" style="border-bottom: 1px solid #fff;">Каталог</a>
             {% else %}
-                <a href="{% url 'catalog' %}?page=2">Katalog</a>
+                <a href="{% url 'catalog' %}?page=2">Каталог</a>
             {% endif %}
             {% if page == 3 %}
-                <a href="{% url 'production' %}?page=3" style="border-bottom: 1px solid #fff" ;>Produkty i usługi</a>
+                <a href="{% url 'production' %}?page=3" style="border-bottom: 1px solid #fff" ;>Продукція та послуги</a>
             {% else %}
-                <a href="{% url 'production' %}?page=3">Produkty i usługi</a>
+                <a href="{% url 'production' %}?page=3">Продукція та послуги</a>
             {% endif %}
             {% if page == 4 %}
-                <a href="{% url 'Delivery_and_payment' %}?page=4" style="border-bottom: 1px solid #fff">Dostawa i
-                    płatność</a>
+                <a href="{% url 'Delivery_and_payment' %}?page=4" style="border-bottom: 1px solid #fff">Доставка та
+                    оплата</a>
             {% else %}
-                <a href="{% url 'Delivery_and_payment' %}?page=4">Dostawa i płatność</a>
+                <a href="{% url 'Delivery_and_payment' %}?page=4">Доставка та оплата</a>
             {% endif %}
             {% if page == 5 %}
-                <a href="{% url 'contact' %}?page=5" style="border-bottom: 1px solid #fff">Kontakty</a>
+                <a href="{% url 'contact' %}?page=5" style="border-bottom: 1px solid #fff">Контакти</a>
             {% else %}
-                <a href="{% url 'contact' %}?page=5">Kontakty</a>
+                <a href="{% url 'contact' %}?page=5">Контакти</a>
             {% endif %}
             {% if page == 6 %}
-                <a href="{% url 'project' %}?page=6" style="border-bottom: 1px solid #fff">Projekty</a>
+                <a href="{% url 'project' %}?page=6" style="border-bottom: 1px solid #fff">Проєкти</a>
             {% else %}
-                <a href="{% url 'project' %}?page=6">Projekty</a>
+                <a href="{% url 'project' %}?page=6">Проєкти</a>
             {% endif %}
-            <div class="language-switcher">PL</div>
+            <div class="language-switcher">UA</div>
         </nav>
     </div>
     {% include 'element/navbar/navbar_burger.html' %}

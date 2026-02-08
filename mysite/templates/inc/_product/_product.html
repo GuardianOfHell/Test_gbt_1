@@ -64,7 +64,7 @@
         <div>
             ＜
             <a href="javascript:history.back()" class="back-to-catalog-link">
-                Wróć do katalogu
+                Повернутися до каталогу
             </a>
         </div>
         <h1 class="memorial_product_page_title_h1">{{ goods.Title }}</h1>
@@ -85,15 +85,15 @@
                         {# Додаткові фото #}
                         {% for image in goods.images.all %}
                             <div class="swiper-slide">
-                                <img src="{{ image.image.url }}" alt="{{ goods.Title }} - dodatkowe zdjęcie">
+                                <img src="{{ image.image.url }}" alt="{{ goods.Title }} — додаткове фото">
                             </div>
                         {% endfor %}
 
                         {# Placeholder slide if no images are available at all #}
                         {% if not goods.img and not goods.images.all %}
                             <div class="swiper-slide">
-                                <img src="https://placehold.co/400x500/e0e0e0/333333?text=Brak+zdj%C4%99cia"
-                                     alt="Brak zdjęcia">
+                                <img src="https://placehold.co/400x500/e0e0e0/333333?text=%D0%9D%D0%B5%D0%BC%D0%B0%D1%94+%D1%84%D0%BE%D1%82%D0%BE"
+                                     alt="Немає фото">
                             </div>
                         {% endif %}
                     </div>
@@ -105,7 +105,7 @@
             <div class="product-info">
                 <div class="product-meta" style="margin-bottom: 0;">
                     <div class="product-size">{{ goods.Size }} cm</div>
-                    <div class="product-sku">Kod: {{ goods.Product_code }}</div>
+                    <div class="product-sku">Код: {{ goods.Product_code }}</div>
                 </div>
                 <div class="product-meta">
                     <div class="product-availability in-stock">{{ goods.Product_availability }}</div>
@@ -114,7 +114,7 @@
                     <span class="price-uah">{{ goods.Price_in_detail_o }} </span>
                     <span class="price-eur">{{ goods.Price_in_detail_evro }}</span>
                 </div>
-                <a href="#background_form_f_id" class="btn btn-order">Zamówienie</a>
+                <a href="#background_form_f_id" class="btn btn-order">Замовити</a>
             </div>
 
             <!-- Колонка з інформацією про доставку -->
@@ -124,11 +124,11 @@
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                         </svg>
-                        ODBIÓR OSOBISTY Z NASZEGO MAGAZYNU:
+                        САМОВИВІЗ ІЗ НАШОГО СКЛАДУ:
                     </h3>
                     <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                         <img style="margin-right: 6px" src="{% static '/mysite/img/_product/svg.png' %}">
-                        <p>73-109 Smogolice, 31А, Polska</p>
+                        <p>73-109 Smogolice, 31А, Польща</p>
                     </div>
                 </div>
                 <div style="border: 1px solid rgb(226, 180, 59); max-width: 345px; margin: 16px 0px;"></div>
@@ -137,25 +137,25 @@
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zM20 11H17V9h2.21l.79 2z"/>
                         </svg>
-                        DOSTAWA:
+                        ДОСТАВКА:
                     </h3>
                     <ul>
                         <li>
                             <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                                 <img style="margin-right: 6px" src="{% static '/mysite/img/_product/svg_1.png' %}">
-                                Manipulator z rozładunkiem
+                                Маніпулятор із розвантаженням
                             </div>
                         </li>
                         <li>
                             <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                                 <img style="margin-right: 6px" src="{% static '/mysite/img/_product/svg_2.png' %}">
-                                Samochód ciężarowy
+                                Вантажний автомобіль
                             </div>
                         </li>
                         <li>
                             <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                                 <img style="margin-right: 6px" src="{% static '/mysite/img/_product/svg_3.png' %}">
-                                Firmy transportowe
+                                Транспортні компанії
                             </div>
                         </li>
                     </ul>
@@ -166,19 +166,19 @@
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1h-2v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                         </svg>
-                        DOSTAWA NA CAŁYM ŚWIECIE:
+                        ДОСТАВКА ПО ВСЬОМУ СВІТУ:
                     </h3>
                     <ul>
                         <li>
                             <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                                 <img style="margin-right: 6px" src="{% static '/mysite/img/_product/svg_3.png' %}">
-                                Firmy transportowe
+                                Транспортні компанії
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div style="border: 1px solid rgb(226, 180, 59); max-width: 345px; margin: 16px 0px;"></div>
-                <a href="#background_form_f_id" class="btn btn-help">Pomoc w wyborze</a>
+                <a href="#background_form_f_id" class="btn btn-help">Допомога з вибором</a>
             </aside>
         </section>
 
@@ -186,7 +186,7 @@
         <section class="details-section">
             <!-- Колонка характеристик -->
             <div class="characteristics-block">
-                <h2>Specyfikacja</h2>
+                <h2>Специфікація</h2>
                 <ul class="characteristics-list">
                     {% for char in goods.Characteristics|parse_characteristics %}
                         <li>
@@ -199,7 +199,7 @@
 
             <!-- Колонка опису -->
             <div class="description-block">
-                <h2>Opis</h2>
+                <h2>Опис</h2>
                 <p>
                     {{ goods.Description|safe }}
                 </p>
@@ -210,11 +210,11 @@
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                         </svg>
-                        ODBIÓR OSOBISTY Z NASZEGO MAGAZYNU:
+                        САМОВИВІЗ ІЗ НАШОГО СКЛАДУ:
                     </h3>
                     <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                         <img style="margin-right: 6px" src="{% static '/mysite/img/_product/svg.png' %}">
-                        <p>73-131 Krąpiel 1B Polska</p>
+                        <p>73-131 Крампель 1B, Польща</p>
                     </div>
                 </div>
                 <div style="border: 1px solid rgb(226, 180, 59); max-width: 345px; margin: 16px 0px;"></div>
@@ -223,26 +223,26 @@
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm12 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zM20 11H17V9h2.21l.79 2z"/>
                         </svg>
-                        DOSTAWA:
+                        ДОСТАВКА:
                     </h3>
                     <ul>
                         <li>
                             <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                                 <img style="margin-right: 6px" src="{% static '/mysite/img/_product/svg_1.png' %}">
                                 
-                                Manipulator z rozładunkiem
+                                Маніпулятор із розвантаженням
                             </div>
                         </li>
                         <li>
                             <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                                 <img style="margin-right: 6px" src="{% static '/mysite/img/_product/svg_2.png' %}">
-                                Samochód ciężarowy
+                                Вантажний автомобіль
                             </div>
                         </li>
                         <li>
                             <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                                 <img style="margin-right: 6px" src="{% static '/mysite/img/_product/svg_3.png' %}">
-                                Firmy transportowe
+                                Транспортні компанії
                             </div>
                         </li>
                     </ul>
@@ -253,29 +253,29 @@
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1h-2v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                         </svg>
-                        DOSTAWA NA CAŁYM ŚWIECIE:
+                        ДОСТАВКА ПО ВСЬОМУ СВІТУ:
                     </h3>
                     <ul>
                         <li>
                             <div style="display: flex; align-items: flex-start; margin-left: 10px;">
                                 <img style="margin-right: 6px" src="{% static '/mysite/img/_product/svg_3.png' %}">
-                                Firmy transportowe
+                                Транспортні компанії
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div style="border: 1px solid rgb(226, 180, 59); max-width: 345px; margin: 16px 0px;"></div>
-                <a href="#background_form_f_id" class="btn btn-help">Pomoc w wyborze</a>
+                <a href="#background_form_f_id" class="btn btn-help">Допомога з вибором</a>
             </aside>
         </section>
     </div>
 </div>
 <div class="custom-cta-section">
     <div class="info-box">
-        <p>Jesteśmy gotowi wykonać wyroby z granitu według Państwa indywidualnych wymiarów.<br>Państwa pomysł staje się
-            podstawą naszego rozwiązania.</p>
+        <p>Ми готові виготовити вироби з граніту за вашими індивідуальними розмірами.<br>Ваша ідея стає
+            основою нашого рішення.</p>
     </div>
-    <a class="cta-button" href="#background_form_f_id">Zostaw zapytanie</a>
+    <a class="cta-button" href="#background_form_f_id">Залишити запит</a>
 </div>
 {% include 'element/Feedback_form.html' %}
 

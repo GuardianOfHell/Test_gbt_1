@@ -2,7 +2,7 @@
 <section class="product_1_body">
     <section class="product_1_body_main-slider">
         <div class="item image">
-            <span class="loading">Ładowanie...</span>
+            <span class="loading">Завантаження...</span>
             <figure>
                 <div class="slide-image slide-media"
                      style="background-image: url('{% static 'mysite/img/production/image2.png' %}');">
@@ -12,7 +12,7 @@
 <!--                <figcaption class="caption">Garant-bud</figcaption>-->
 <!--                <figcaption class="caption123">Wyroby z granitu dla budownictwa-->
 <!--                    Konstrukcje metalowe-->
-<!--                    Roboty budowlane i montażowe-->
+<!--                    Будівельно-монтажні роботи-->
 <!--                </figcaption>-->
                 <figcaption class="caption2">Garant-bud</figcaption>
             </figure>
@@ -20,12 +20,12 @@
 <!--        <div class="item video" data-video-start="4">-->
 <!--            <video class="embed-player slide-media" width="1920" height="1020">-->
 <!--                <source src="{% static 'mysite/img/production/video.mp4' %}" type="video/mp4">-->
-<!--                Twój przeglądarka nie obsługuje tagu wideo.-->
+<!--                Ваш браузер не підтримує тег відео.-->
 <!--            </video>-->
 <!--        </div>-->
 
         <div class="item image">
-            <span class="loading">Ładowanie...</span>
+            <span class="loading">Завантаження...</span>
             <figure>
                 <div class="slide-image slide-media"
                      style="background-image: url('{% static 'mysite/img/production/image1.png' %}');">
@@ -36,7 +36,7 @@
             </figure>
         </div>
         <div class="item image">
-            <span class="loading">Ładowanie...</span>
+            <span class="loading">Завантаження...</span>
             <figure>
                 <div class="slide-image slide-media"
                      style="background-image: url('{% static 'mysite/img/production/image.png' %}');">
@@ -63,13 +63,13 @@
         lazyImages = slideWrapper.find('.slide-image');
     let lazyCounter = 0;
 
-    // Wysyłanie komend do API YouTube lub Vimeo
+    // Надсилання команд до API YouTube або Vimeo
     const postMessageToPlayer = (player, command) => {
         if (player == null || command == null) return;
         player.contentWindow.postMessage(JSON.stringify(command), "*");
     }
 
-    // Kiedy zmienia się slajd
+    // Коли змінюється слайд
     const playPauseVideo = (slick, control) => {
         let currentSlide, slideType, startTime, player, video;
 
@@ -131,7 +131,7 @@
         }
     }
 
-    // Po załadowaniu DOM
+    // Після завантаження DOM
     $(function () {
         // Inicjalizacja
         slideWrapper.on("init", function (slick) {
@@ -139,7 +139,7 @@
             setTimeout(function () {
                 playPauseVideo(slick, "play");
             }, 1000);
-            // usunięcie wywołania resizePlayer
+            // видалення виклику resizePlayer
         });
         slideWrapper.on("beforeChange", function (event, slick) {
             slick = $(slick.$slider);
@@ -157,7 +157,7 @@
             }
         });
 
-        // Rozpocznij slider bez zmiany rozmiaru elementów odtwarzacza
+        // Запускаємо слайдер без зміни розміру елементів плеєра
         slideWrapper.slick({
             autoplaySpeed: 4000,
             lazyLoad: "progressive",
@@ -168,6 +168,6 @@
         });
     });
 
-    // Usuń nasłuchiwacz zdarzenia resize
+    // Прибираємо слухач події resize
     $(window).off("resize.slickVideoPlayer");
 </script>
