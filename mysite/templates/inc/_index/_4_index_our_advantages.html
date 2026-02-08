@@ -1,5 +1,5 @@
 <section class="index_our_advantages">
-    <div class="index_our_advantages_title">Nasze zalety</div>
+    <div class="index_our_advantages_title">Наші переваги</div>
     <div class="container max-w-5xl mx-auto px-8">
         <div class="card-wraper">
             <div class="background" id="background"></div>
@@ -7,9 +7,9 @@
                 <div class="card-main">
                     <div class="card-inner">
                         <div>
-                            <h3>Konsultacje i wsparcie ekspertów</h3>
-                            <p>Oferujemy profesjonalne porady dotyczące wyboru kamienia i optymalnych rozwiązań dla każdego
-                                projektu. Nasi specjaliści pomagają znaleźć najlepszą opcję do projektowania i montażu.</p>
+                            <h3>Консультації та підтримка експертів</h3>
+                            <p>Надаємо професійні поради щодо вибору каменю та оптимальних рішень для кожного проєкту.
+                                Наші фахівці допомагають знайти найкращий варіант для проєктування й монтажу.</p>
                         </div>
                     </div>
                 </div>
@@ -18,9 +18,9 @@
                 <div class="card-main">
                     <div class="card-inner">
                         <div>
-                            <h3>Indywidualne rozwiązania pod klucz</h3>
-                            <p>Oferujemy kompleksową usługę — od pomiarów po montaż, aby proces był wygodny i komfortowy dla naszych klientów.
-                                Twój projekt zostanie ukończony zgodnie z Twoimi potrzebami i oczekiwaniami.</p>
+                            <h3>Індивідуальні рішення «під ключ»</h3>
+                            <p>Надаємо комплексну послугу — від замірів до монтажу, щоб процес був зручним і комфортним
+                                для наших клієнтів. Ваш проєкт буде виконано відповідно до ваших потреб та очікувань.</p>
                         </div>
                     </div>
                 </div>
@@ -29,8 +29,9 @@
                 <div class="card-main">
                     <div class="card-inner">
                         <div>
-                            <h3>Indywidualne oferty</h3>
-                            <p>Oferujemy elastyczne warunki współpracy oraz spersonalizowane oferty handlowe dla każdego klienta, uwzględniając specyfikę projektu i budżet.</p>
+                            <h3>Індивідуальні пропозиції</h3>
+                            <p>Пропонуємо гнучкі умови співпраці та персоналізовані комерційні пропозиції для кожного клієнта,
+                                враховуючи специфіку проєкту й бюджет.</p>
                         </div>
                     </div>
                 </div>
@@ -39,8 +40,9 @@
                 <div class="card-main">
                     <div class="card-inner">
                         <div>
-                            <h3>Odpowiedzialność ekologiczna</h3>
-                            <p>Przestrzegamy rygorystycznych standardów ekologicznych podczas wydobycia i obróbki kamienia. Nasze materiały są ekologiczne i bezpieczne dla zdrowia.</p>
+                            <h3>Екологічна відповідальність</h3>
+                            <p>Дотримуємося суворих екологічних стандартів під час видобутку й обробки каменю. Наші матеріали
+                                екологічні та безпечні для здоров’я.</p>
                         </div>
                     </div>
                 </div>
@@ -49,8 +51,9 @@
                 <div class="card-main">
                     <div class="card-inner">
                         <div>
-                            <h3>Wsparcie techniczne</h3>
-                            <p>Po zakupie zapewniamy klientom porady dotyczące pielęgnacji kamienia oraz możliwość renowacji. Nasi klienci mogą liczyć na długoterminowe wsparcie i pomoc.</p>
+                            <h3>Технічна підтримка</h3>
+                            <p>Після покупки надаємо клієнтам поради щодо догляду за каменем і можливості реставрації.
+                                Наші клієнти можуть розраховувати на довгострокову підтримку й допомогу.</p>
                         </div>
                     </div>
                 </div>
@@ -59,8 +62,9 @@
                 <div class="card-main">
                     <div class="card-inner">
                         <div>
-                            <h3>Opinie zwrotne</h3>
-                            <p>Szybko odpowiadamy na zapytania i zapewniamy dostęp do portfolio udanych projektów. Pomaga to klientom pewnie wybierać najlepsze rozwiązania do swoich obiektów.</p>
+                            <h3>Зворотний зв’язок</h3>
+                            <p>Швидко відповідаємо на запити та надаємо доступ до портфоліо успішних проєктів. Це допомагає
+                                клієнтам упевнено обирати найкращі рішення для своїх об’єктів.</p>
                         </div>
                     </div>
                 </div>
@@ -73,10 +77,10 @@
         var cards = document.querySelectorAll("a.card");
         var background = document.querySelector(".background");
 
-        // Zapisz indeks ostatniej najechanej karty
+        // Зберігаємо індекс останньої наведеної картки
         var lastHoveredCardIndex = localStorage.getItem("lastHoveredCardIndex") || 0;
 
-        // Ustaw tło na ostatnią najechaną kartę domyślnie
+        // Встановлюємо тло на останню наведену картку за замовчуванням
         var cardRect = cards[lastHoveredCardIndex].getBoundingClientRect();
         var x = cardRect.left + window.scrollX + cardRect.width / 2;
         var y = cardRect.top + window.scrollY + cardRect.height / 2;
@@ -86,11 +90,11 @@
         background.style.transform = `translate(${x - cardRect.width / 2}px, ${
             y - cardRect.height / 2
         }px)`;
-        background.style.opacity = "0"; // Ustaw przezroczystość na 0 przy załadowaniu strony
+        background.style.opacity = "0"; // Встановлюємо прозорість на 0 під час завантаження сторінки
 
         cards.forEach(function (card, index) {
             card.addEventListener("mouseenter", function (e) {
-                // Jeśli karta jest powiększona, przerywamy działanie efektu hover
+                // Якщо картка збільшена, зупиняємо роботу ефекту hover
                 if (card.classList.contains("zoomed")) {
                     return;
                 }
@@ -104,17 +108,17 @@
                 background.style.transform = `translate(${x - rect.width / 2}px, ${
                     y - rect.height / 2
                 }px)`;
-                background.style.opacity = "1"; // Zmieniamy przezroczystość na 1, gdy karta jest najechana
+                background.style.opacity = "1"; // Змінюємо прозорість на 1, коли картка наведена
                 background.style.top = "0%";
                 background.style.left = "0%";
                 background.style.transformOrigin = "center";
-                // Zapisz indeks najechanej karty
+                // Зберігаємо індекс наведеної картки
                 localStorage.setItem("lastHoveredCardIndex", index);
             });
 
             card.addEventListener("mouseleave", function (e) {
-                background.style.opacity = "0"; // Zmieniamy przezroczystość na 0, gdy myszka opuszcza kartę
-                // Resetujemy rozmiar tła, gdy myszka opuszcza kartę
+                background.style.opacity = "0"; // Змінюємо прозорість на 0, коли курсор залишає картку
+                // Скидаємо розмір тла, коли курсор залишає картку
                 background.style.width = "0px";
                 background.style.height = "0px";
             });

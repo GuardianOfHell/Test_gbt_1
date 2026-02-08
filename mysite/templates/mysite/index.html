@@ -88,7 +88,7 @@
         },
 
         init() {
-            // Sprawdź czy użytkownik już wybrał ustawienia
+            // Перевір, чи користувач уже обрав налаштування
             const saved = localStorage.getItem('cookieConsent');
             if (saved) {
                 this.preferences = JSON.parse(saved);
@@ -125,10 +125,10 @@
             
             if (this.preferences[category]) {
                 toggle.classList.add('active');
-                status.textContent = 'Włączone';
+                status.textContent = 'Увімкнено';
             } else {
                 toggle.classList.remove('active');
-                status.textContent = 'Wyłączone';
+                status.textContent = 'Вимкнено';
             }
         },
 
@@ -149,7 +149,7 @@
             this.hideBanner();
             this.closeSettings();
             this.applyPreferences();
-            console.log('Zaakceptowano wszystkie cookies');
+            console.log('Усі cookies прийнято');
         },
 
         rejectNonEssential() {
@@ -163,7 +163,7 @@
             this.hideBanner();
             this.closeSettings();
             this.applyPreferences();
-            console.log('Odrzucono nieistotne cookies');
+            console.log('Відхилено необов’язкові cookies');
         },
 
         savePreferences() {
@@ -171,7 +171,7 @@
             this.hideBanner();
             this.closeSettings();
             this.applyPreferences();
-            console.log('Zapisano preferencje:', this.preferences);
+            console.log('Налаштування збережено:', this.preferences);
         },
 
         saveToStorage() {
@@ -180,8 +180,8 @@
         },
 
         applyPreferences() {
-            // Tutaj dodaj kod do włączania/wyłączania skryptów zewnętrznych
-            // np. Google Analytics, Facebook Pixel, itp.
+            // Тут додайте код для увімкнення/вимкнення зовнішніх скриптів
+            // наприклад, Google Analytics, Facebook Pixel тощо.
             
             if (this.preferences.analytics) {
                 this.enableAnalytics();
@@ -202,51 +202,51 @@
             }
         },
 
-        // Funkcje do implementacji - włączanie/wyłączanie konkretnych skryptów
+        // Функції для реалізації — увімкнення/вимкнення конкретних скриптів
         enableAnalytics() {
-            // Włącz Google Analytics, Hotjar, itp.
-            console.log('Włączono analitykę');
-            // Przykład: gtag('consent', 'update', {'analytics_storage': 'granted'});
+            // Увімкніть Google Analytics, Hotjar тощо.
+            console.log('Аналітику увімкнено');
+            // Приклад: gtag('consent', 'update', {'analytics_storage': 'granted'});
         },
 
         disableAnalytics() {
-            // Wyłącz analitykę
-            console.log('Wyłączono analitykę');
-            // Przykład: gtag('consent', 'update', {'analytics_storage': 'denied'});
+            // Вимкніть аналітику
+            console.log('Аналітику вимкнено');
+            // Приклад: gtag('consent', 'update', {'analytics_storage': 'denied'});
         },
 
         enableMarketing() {
-            console.log('Włączono marketing');
-            // Przykład: gtag('consent', 'update', {'ad_storage': 'granted'});
+            console.log('Маркетинг увімкнено');
+            // Приклад: gtag('consent', 'update', {'ad_storage': 'granted'});
         },
 
         disableMarketing() {
-            console.log('Wyłączono marketing');
-            // Przykład: gtag('consent', 'update', {'ad_storage': 'denied'});
+            console.log('Маркетинг вимкнено');
+            // Приклад: gtag('consent', 'update', {'ad_storage': 'denied'});
         },
 
         enableFunctional() {
-            console.log('Włączono funkcjonalne');
+            console.log('Функціональні увімкнено');
         },
 
         disableFunctional() {
-            console.log('Wyłączono funkcjonalne');
+            console.log('Функціональні вимкнено');
         }
     };
 
-    // Inicjalizacja po załadowaniu strony
+    // Ініціалізація після завантаження сторінки
     document.addEventListener('DOMContentLoaded', () => {
         cookieConsent.init();
     });
 
-    // Zamknięcie modalu klawiszem ESC
+    // Закриття модального вікна клавішею ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             cookieConsent.closeSettings();
         }
     });
 
-    // Zamknięcie modalu po kliknięciu poza nim
+    // Закриття модального вікна після кліку поза ним
     document.getElementById('cookieModal').addEventListener('click', (e) => {
         if (e.target.id === 'cookieModal') {
             cookieConsent.closeSettings();
