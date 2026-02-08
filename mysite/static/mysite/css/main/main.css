@@ -1,0 +1,16 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+main {
+    padding-top: 80px; /* Висота навігаційної панелі */
+}
+
+.container_body1 {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}

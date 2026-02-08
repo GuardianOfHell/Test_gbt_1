@@ -1,0 +1,310 @@
+<!-- Подключение стилей Swiper -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
+
+    .main_kamin_gov {
+        position: relative;
+        width: calc(min(90rem, 90%));
+        margin: 0 auto;
+        column-gap: 3rem;
+        padding-block: min(20vh, 3rem);
+    }
+
+    .main_kamin_gov .bg {
+        position: fixed;
+        top: -4rem;
+        left: -12rem;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .main_kamin_gov .bg2 {
+        position: fixed;
+        bottom: -2rem;
+        right: -3rem;
+        z-index: -1;
+        width: 9.375rem;
+        opacity: 0;
+    }
+
+    .main_kamin_gov > div span {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 1rem;
+        color: #717171;
+    }
+
+    .main_kamin_gov > div h1 {
+        text-transform: capitalize;
+        letter-spacing: 0.8px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 900;
+        font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+        background-color: #000000;
+        background-image: linear-gradient(257deg, #000000, #000000);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+
+    .main_kamin_gov > div hr {
+        display: block;
+        background: rgb(226, 180, 59);
+        height: 1px;
+        width: 100%;
+        max-width: 350px;
+        border: none;
+        margin: 1.125rem 0 1.875rem 0;
+    }
+
+    .main_kamin_gov > div p {
+        line-height: 1.6;
+    }
+
+    .main_kamin_gov a {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #717171;
+        font-weight: 500;
+        background: #fff;
+        border-radius: 3.125rem;
+        transition: 0.3s ease-in-out;
+    }
+
+    .main_kamin_gov > div > a {
+        border: 2px solid #c2c2c2;
+        margin-top: 2.188rem;
+        padding: 0.625rem 1.875rem;
+    }
+
+    .main_kamin_gov > div > a:hover {
+        border: 0.125rem solid #005baa;
+        color: #005baa;
+    }
+
+    .main_kamin_gov .swiper {
+        width: 100%;
+        padding-top: 3.125rem;
+    }
+
+    .main_kamin_gov .swiper-pagination-bullet,
+    .main_kamin_gov .swiper-pagination-bullet-active {
+        background: #fff;
+    }
+
+    .main_kamin_gov .swiper-pagination {
+        bottom: 1.25rem !important;
+    }
+
+    .main_kamin_gov .swiper-slide {
+        width: 18.75rem;
+        height: 28.125rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: self-start;
+    }
+
+    .main_kamin_gov .swiper-slide h2 {
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        margin-bottom: 0.625rem;
+        padding: 0 0 0 1.563rem;
+        text-transform: uppercase;
+    }
+
+    .main_kamin_gov .swiper-slide p {
+        color: #dadada;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        padding: 0 1.563rem;
+        line-height: 1.6;
+        font-size: 0.75rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .main_kamin_gov .swiper-slide a {
+        margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+        padding: 0.438em 1.875rem;
+        font-size: 0.9rem;
+    }
+
+    .main_kamin_gov .swiper-slide a:hover {
+        color: #005baa;
+    }
+
+    .main_kamin_gov .swiper-slide div {
+        display: none;
+        opacity: 0;
+        padding-bottom: 0.625rem;
+    }
+
+    .main_kamin_gov .swiper-slide-active div {
+        display: block;
+        opacity: 1;
+    }
+
+    .main_kamin_gov .swiper-slide--one {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("фрейм 272.png") no-repeat 50% 50% / cover;
+    }
+
+    .main_kamin_gov .swiper-slide--two {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("фрейм 271.png") no-repeat 50% 50% / cover;
+    }
+
+    .main_kamin_gov .swiper-slide--three {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("фрейм 268.png") no-repeat 50% 50% / cover;
+    }
+
+    .main_kamin_gov .swiper-slide--four {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("фрейм 273.png") no-repeat 50% 50% / cover;
+    }
+
+    .main_kamin_gov .swiper-slide--five {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("фрейм 269.png") no-repeat 50% 50% / cover;
+    }
+
+    .main_kamin_gov .swiper-slide--five2 {
+        background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("фрейм 270.png") no-repeat 50% 50% / cover;
+    }
+
+    .main_kamin_gov .swiper-3d .swiper-slide-shadow-left,
+    .main_kamin_gov .swiper-3d .swiper-slide-shadow-right {
+        background-image: none;
+    }
+
+    .main_kamin_gov .fgrtg {
+        width: 440px;
+        max-width: 100%;
+        color: rgb(0, 0, 0);
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 59px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+
+    .main_kamin_gov .fgvbhj {
+        width: 100%;
+        max-width: 660px;
+    }
+
+    @media screen and (min-width: 48rem) {
+        .main_kamin_gov {
+            display: flex;
+        {#align-items: center;#}
+        }
+
+        .main_kamin_gov .bg,
+        .main_kamin_gov .bg2 {
+            opacity: 0.1;
+        }
+    }
+
+    @media screen and (min-width: 93.75rem) {
+        .main_kamin_gov .swiper {
+            width: 85%;
+        }
+    }
+</style>
+<body>
+<section class="main_kamin_gov">
+    <div>
+        <h1 class="fgrtg">Камінь, що говорить мовою вічності.</h1>
+        <hr>
+        <p class="fgvbhj">Граніт виділяється своєю екологічністю, оскільки це природний матеріал, що не містить штучних
+            добавок. Він
+            володіє відмінною стійкістю до зношування і зберігає свій первісний вигляд навіть при тривалій експлуатації
+            в жорстких умовах. Крім того, граніт є універсальним матеріалом, який підходить як для внутрішнього, так і
+            для зовнішнього використання, що робить його вигідним вибором для багатьох будівельних проєктів.</p>
+    </div>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide--one">
+                <div>
+                    <h2>Граніт</h2>
+                    <p style="padding-bottom: 50px;">Служить понад 100 років, стійкий до подряпин, ударів і
+                        температур</p>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide--two">
+                <div>
+                    <h2>Мармур</h2>
+                    <p style="padding-bottom: 50px;">Термін служби понад 100 років, менш стійкий до подряпин і
+                        кислот</p>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide--three">
+                <div>
+                    <h2 style="width: 50px;">Кварцовий агломерат</h2>
+                    <p style="padding-bottom: 50px;">Служить понад 100 років, стійкий до подряпин, ударів і
+                        температур</p>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide--four">
+                <div>
+                    <h2>Бетон</h2>
+                    <p style="padding-bottom: 50px;">Служить 50-100 років, менш естетичний, але міцний</p>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide--five">
+                <div>
+                    <h2 style="width: 50px;">Керамічна плитка</h2>
+                    <p style="padding-bottom: 50px;">Служить 50-75 років, стійка до вологи, але може тріскатися</p>
+                </div>
+            </div>
+            <div class="swiper-slide swiper-slide--five2">
+                <div>
+                    <h2 style="width: 50px;">Натуральне дерево</h2>
+                    <p style="padding-bottom: 50px;">Служить до 50 років, менш стійке до вологи і пошкоджень</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Навигация Swiper -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- Подключение скрипта Swiper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>

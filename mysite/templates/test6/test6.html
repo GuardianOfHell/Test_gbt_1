@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LightSlider Example</title>
+    <!-- Підключаємо стилі LightSlider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"/>
+    <style>
+        /* Унікальні стилі для цього слайдера */
+        .custom-slider-container {
+            width: 450px;
+            margin: 0 auto;
+        }
+
+        .custom-slider-container ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .custom-slider-container li {
+            display: block;
+            float: left;
+            margin-right: 6px;
+            cursor: pointer;
+        }
+
+        .custom-slider-container img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="custom-slider-container">
+    <ul id="customLightSlider">
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-1.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-1.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-2.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-2.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-3.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-3.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-4.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-4.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-5.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-5.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-6.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-6.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-7.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-7.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-8.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-8.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-9.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-9.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-10.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-10.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-11.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-12.jpg"/>
+        </li>
+        <li data-thumb="https://sachinchoolur.github.io/lightslider/img/thumb/cS-13.jpg">
+            <img src="https://sachinchoolur.github.io/lightslider/img/cS-13.jpg"/>
+        </li>
+    </ul>
+</div>
+
+<!-- Підключаємо jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Підключаємо LightSlider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Ініціалізація LightSlider з унікальним селектором
+        $('#customLightSlider').lightSlider({
+            gallery: true,
+            item: 1,
+            loop: true,
+            slideMargin: 0,
+            thumbItem: 9
+        });
+    });
+</script>
+</body>
+</html>
