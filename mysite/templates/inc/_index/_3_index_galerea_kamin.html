@@ -1,17 +1,14 @@
 {% load static %}
 <section class="main_kamin_gov">
     <div>
-        <h1 class="fgrtg hidden">Kamień, który mówi językiem wieczności.</h1>
+        <h1 class="fgrtg hidden">Камінь, що говорить мовою вічності.</h1>
         <hr>
-        <p class="fgvbhj hidden">Granit wyróżnia się swoją ekologiczną naturą, ponieważ jest to materiał naturalny,
-            który nie zawiera
-            sztucznych dodatków.</p>
-        <p class="fgvbhj hidden">Charakteryzuje się doskonałą odpornością na zużycie i zachowuje swój pierwotny wygląd
-            nawet przy długotrwałym
-            użytkowaniu w trudnych warunkach.</p>
-        <p class="fgvbhj hidden">Ponadto granit jest materiałem uniwersalnym, który nadaje się zarówno do użytku
-            wewnętrznego, jak i
-            zewnętrznego, co czyni go opłacalnym wyborem do wielu projektów budowlanych.</p>
+        <p class="fgvbhj hidden">Граніт вирізняється своєю екологічністю, адже це природний матеріал, який не містить
+            штучних домішок.</p>
+        <p class="fgvbhj hidden">Він має відмінну стійкість до зношування та зберігає первісний вигляд навіть за
+            тривалого використання у складних умовах.</p>
+        <p class="fgvbhj hidden">Крім того, граніт є універсальним матеріалом, придатним як для внутрішнього, так і для
+            зовнішнього застосування, що робить його вигідним вибором для багатьох будівельних проєктів.</p>
     </div>
 
     <div class="swiper mySwiper">
@@ -19,54 +16,51 @@
             <div class="swiper-slide swiper-slide--one">
                 <div>
                     <h2>Granit</h2>
-                    <p style="padding-bottom: 50px;">Wytrzymuje nawet 500 lat i jest odporny na zarysowania, uderzenia i
-                        temperatury.</p>
+                    <p style="padding-bottom: 50px;">Служить до 500 років і стійкий до подряпин, ударів та температур.</p>
                 </div>
             </div>
             <div class="swiper-slide swiper-slide--two">
                 <div>
-                    <h2>Marmur</h2>
-                    <p style="padding-bottom: 50px;">Czas użytkowania ponad 100 lat, mniej odporny na zarysowania i
-                        kwasy</p>
+                    <h2>Мармур</h2>
+                    <p style="padding-bottom: 50px;">Термін служби понад 100 років, менш стійкий до подряпин і кислот</p>
                 </div>
             </div>
             <div class="swiper-slide swiper-slide--three">
                 <div>
-                    <h2 style="width: 50px;">Aglomerat kwarcowy</h2>
-                    <p style="padding-bottom: 50px;">Służy ponad 100 lat, odporny na zarysowania, uderzenia i
-                        temperatury</p>
+                    <h2 style="width: 50px;">Кварцовий агломерат</h2>
+                    <p style="padding-bottom: 50px;">Служить понад 100 років, стійкий до подряпин, ударів та температур</p>
                 </div>
             </div>
             <div class="swiper-slide swiper-slide--four">
                 <div>
-                    <h2>Beton</h2>
-                    <p style="padding-bottom: 50px;">Służy 50-100 lat, mniej estetyczny, ale wytrzymały</p>
+                    <h2>Бетон</h2>
+                    <p style="padding-bottom: 50px;">Служить 50–100 років, менш естетичний, але міцний</p>
                 </div>
             </div>
             <div class="swiper-slide swiper-slide--five">
                 <div>
-                    <h2 style="width: 50px;">Płytki ceramiczne</h2>
-                    <p style="padding-bottom: 50px;">Służy 50-75 lat, odporny na wilgoć, ale może pękać</p>
+                    <h2 style="width: 50px;">Керамічна плитка</h2>
+                    <p style="padding-bottom: 50px;">Служить 50–75 років, стійка до вологи, але може тріскатися</p>
                 </div>
             </div>
             <div class="swiper-slide swiper-slide--five2">
                 <div>
-                    <h2 style="width: 50px;">Drewno naturalne</h2>
-                    <p style="padding-bottom: 50px;">Służy do 50 lat, mniej odporne na wilgoć i uszkodzenia</p>
+                    <h2 style="width: 50px;">Натуральна деревина</h2>
+                    <p style="padding-bottom: 50px;">Служить до 50 років, менш стійка до вологи та пошкоджень</p>
                 </div>
             </div>
         </div>
 
-        <!-- Nawigacja Swiper -->
+        <!-- Навігація Swiper -->
         <div class="swiper-pagination"></div>
     </div>
 </section>
 
-<!-- Dołączenie skryptu Swiper -->
+<!-- Підключення скрипту Swiper -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <script>
-    // Inicjalizacja pierwszego slidera
+    // Ініціалізація першого слайдера
     const swiper1 = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
@@ -95,17 +89,17 @@
                 var rect = element.getBoundingClientRect();
                 var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
 
-                // Sprawdzenie, czy element jest widoczny na ekranie
+                // Перевірка, чи елемент видно на екрані
                 if (rect.top <= windowHeight && rect.bottom >= 0) {
-                    element.classList.add("visible"); // Dodanie klasy do animacji
+                    element.classList.add("visible"); // Додавання класу для анімації
                 } else {
-                    element.classList.remove("visible"); // Usunięcie klasy, jeśli element nie jest widoczny
+                    element.classList.remove("visible"); // Видалення класу, якщо елемент не видно
                 }
             });
         }
 
-        // Dodanie nasłuchiwacza zdarzeń przewijania
+        // Додавання слухача події прокручування
         window.addEventListener("scroll", checkVisibility);
-        checkVisibility(); // Sprawdzanie od razu, na wypadek gdyby element był już widoczny
+        checkVisibility(); // Перевірка одразу, якщо елемент уже видно
     });
 </script>

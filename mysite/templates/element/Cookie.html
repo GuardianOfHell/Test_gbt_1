@@ -3,12 +3,13 @@
 <div id="cookieBanner" class="cookie-banner">
     <div class="cookie-container">
         <div class="cookie-text">
-            <p>Używamy plików cookie do zapewnienia prawidłowego działania strony (niezbędne), analizy (statystyki) i marketingu. Szczegóły w <a href="{% url 'cookie' %}">Polityce Cookies</a>.</p>
+            <p>Ми використовуємо файли cookie для забезпечення належної роботи сайту (необхідні), аналітики
+                (статистика) та маркетингу. Деталі в <a href="{% url 'cookie' %}">Політиці Cookies</a>.</p>
         </div>
         <div class="cookie-buttons">
-            <button class="btn btn-primary" onclick="cookieConsent.acceptAll()">Akceptuj wszystkie</button>
-            <button class="btn btn-secondary" onclick="cookieConsent.rejectNonEssential()">Odrzuć nieistotne</button>
-            <button class="btn btn-outline" onclick="cookieConsent.openSettings()">Ustawienia</button>
+            <button class="btn btn-primary" onclick="cookieConsent.acceptAll()">Прийняти всі</button>
+            <button class="btn btn-secondary" onclick="cookieConsent.rejectNonEssential()">Відхилити необов’язкові</button>
+            <button class="btn btn-outline" onclick="cookieConsent.openSettings()">Налаштування</button>
         </div>
     </div>
 </div>
@@ -17,80 +18,84 @@
 <div id="cookieModal" class="cookie-modal">
     <div class="modal-content">
         <div class="modal-header">
-            <h2 class="modal-title">Ustawienia Cookies</h2>
+            <h2 class="modal-title">Налаштування Cookies</h2>
             <button class="modal-close" onclick="cookieConsent.closeSettings()">&times;</button>
         </div>
         <div class="modal-body">
             
-            <!-- Niezbędne -->
+            <!-- Необхідні -->
             <div class="cookie-category">
                 <div class="category-header">
-                    <h3 class="category-title">Niezbędne</h3>
+                    <h3 class="category-title">Необхідні</h3>
                     <div class="category-status">
-                        <span class="status-text">Zawsze włączone</span>
+                        <span class="status-text">Завжди увімкнені</span>
                         <div class="toggle-switch disabled active">
                             <div class="toggle-slider"></div>
                         </div>
                     </div>
                 </div>
                 <p class="category-description">
-                    Te pliki cookie są niezbędne do prawidłowego funkcjonowania strony i nie można ich wyłączyć. Zapewniają podstawowe funkcje, takie jak nawigacja po stronie i dostęp do bezpiecznych obszarów.
+                    Ці файли cookie необхідні для коректної роботи сайту і їх неможливо вимкнути. Вони забезпечують
+                    базові функції, такі як навігація сторінками та доступ до захищених розділів.
                 </p>
             </div>
 
             <!-- Analityczne -->
             <div class="cookie-category">
                 <div class="category-header">
-                    <h3 class="category-title">Analityczne (Statystyki)</h3>
+                    <h3 class="category-title">Аналітичні (статистика)</h3>
                     <div class="category-status">
-                        <span class="status-text" id="analyticsStatus">Wyłączone</span>
+                        <span class="status-text" id="analyticsStatus">Вимкнено</span>
                         <div class="toggle-switch" id="analyticsToggle" onclick="cookieConsent.toggleCategory('analytics')">
                             <div class="toggle-slider"></div>
                         </div>
                     </div>
                 </div>
                 <p class="category-description">
-                    Pomagają nam zrozumieć, w jaki sposób odwiedzający wchodzą w interakcję ze stroną, zbierając i raportując informacje anonimowo. Używamy Google Analytics i podobnych narzędzi.
+                    Допомагають нам зрозуміти, як відвідувачі взаємодіють із сайтом, збираючи та анонімно звітуючи
+                    інформацію. Ми використовуємо Google Analytics та подібні інструменти.
                 </p>
             </div>
 
             <!-- Marketingowe -->
             <div class="cookie-category">
                 <div class="category-header">
-                    <h3 class="category-title">Marketingowe</h3>
+                    <h3 class="category-title">Маркетингові</h3>
                     <div class="category-status">
-                        <span class="status-text" id="marketingStatus">Wyłączone</span>
+                        <span class="status-text" id="marketingStatus">Вимкнено</span>
                         <div class="toggle-switch" id="marketingToggle" onclick="cookieConsent.toggleCategory('marketing')">
                             <div class="toggle-slider"></div>
                         </div>
                     </div>
                 </div>
                 <p class="category-description">
-                    Służą do śledzenia odwiedzających na stronach internetowych w celu wyświetlania odpowiednich i angażujących reklam. Mogą być ustawiane przez naszych partnerów reklamowych.
+                    Використовуються для відстеження відвідувачів на сайтах з метою показу релевантної та цікавої
+                    реклами. Можуть встановлюватися нашими рекламними партнерами.
                 </p>
             </div>
 
             <!-- Funkcjonalne -->
             <div class="cookie-category">
                 <div class="category-header">
-                    <h3 class="category-title">Funkcjonalne</h3>
+                    <h3 class="category-title">Функціональні</h3>
                     <div class="category-status">
-                        <span class="status-text" id="functionalStatus">Wyłączone</span>
+                        <span class="status-text" id="functionalStatus">Вимкнено</span>
                         <div class="toggle-switch" id="functionalToggle" onclick="cookieConsent.toggleCategory('functional')">
                             <div class="toggle-slider"></div>
                         </div>
                     </div>
                 </div>
                 <p class="category-description">
-                    Umożliwiają stronie zapamiętanie wyborów dokonanych przez użytkownika (np. nazwa użytkownika, język, region) w celu zapewnienia lepszej funkcjonalności.
+                    Дозволяють сайту запам’ятовувати вибір користувача (наприклад, ім’я користувача, мову, регіон) для
+                    кращої функціональності.
                 </p>
             </div>
 
         </div>
         <div class="modal-footer">
-            <button class="btn btn-secondary" onclick="cookieConsent.rejectNonEssential()">Odrzuć nieistotne</button>
-            <button class="btn btn-outline" onclick="cookieConsent.savePreferences()">Zapisz preferencje</button>
-            <button class="btn btn-primary" onclick="cookieConsent.acceptAll()">Akceptuj wszystkie</button>
+            <button class="btn btn-secondary" onclick="cookieConsent.rejectNonEssential()">Відхилити необов’язкові</button>
+            <button class="btn btn-outline" onclick="cookieConsent.savePreferences()">Зберегти налаштування</button>
+            <button class="btn btn-primary" onclick="cookieConsent.acceptAll()">Прийняти всі</button>
         </div>
     </div>
 </div>

@@ -6,35 +6,35 @@
 <div class="navbar_burger">
     <ul class="main">
         {% if page == 1 %}
-            <li><a href="{% url 'index' %}?page=1" style="border-bottom: 1px solid #fff;">Strona główna</a></li>
+            <li><a href="{% url 'index' %}?page=1" style="border-bottom: 1px solid #fff;">Головна</a></li>
         {% else %}
-            <li><a href="{% url 'index' %}?page=1">Strona główna</a></li>
+            <li><a href="{% url 'index' %}?page=1">Головна</a></li>
         {% endif %}
         {% if page == 2 %}
-            <li><a href="{% url 'catalog' %}?page=2" style="border-bottom: 1px solid #fff;">Katalog</a></li>
+            <li><a href="{% url 'catalog' %}?page=2" style="border-bottom: 1px solid #fff;">Каталог</a></li>
         {% else %}
-            <li><a href="{% url 'catalog' %}?page=2">Katalog</a></li>
+            <li><a href="{% url 'catalog' %}?page=2">Каталог</a></li>
         {% endif %}
         {% if page == 3 %}
-            <li><a href="{% url 'production' %}?page=3" style="border-bottom: 1px solid #fff" ;>Produkty i usługi</a></li>
+            <li><a href="{% url 'production' %}?page=3" style="border-bottom: 1px solid #fff" ;>Продукція та послуги</a></li>
         {% else %}
-            <li><a href="{% url 'production' %}?page=3">Produkty i usługi</a></li>
+            <li><a href="{% url 'production' %}?page=3">Продукція та послуги</a></li>
         {% endif %}
         {% if page == 4 %}
-            <li><a href="{% url 'Delivery_and_payment' %}?page=4" style="border-bottom: 1px solid #fff">Dostawa i
-                płatność</a></li>
+            <li><a href="{% url 'Delivery_and_payment' %}?page=4" style="border-bottom: 1px solid #fff">Доставка та
+                оплата</a></li>
         {% else %}
-            <li><a href="{% url 'Delivery_and_payment' %}?page=4">Dostawa i płatność</a></li>
+            <li><a href="{% url 'Delivery_and_payment' %}?page=4">Доставка та оплата</a></li>
         {% endif %}
         {% if page == 5 %}
-            <li><a href="{% url 'contact' %}?page=5" style="border-bottom: 1px solid #fff">Kontakty</a></li>
+            <li><a href="{% url 'contact' %}?page=5" style="border-bottom: 1px solid #fff">Контакти</a></li>
         {% else %}
-            <li><a href="{% url 'contact' %}?page=5">Kontakty</a></li>
+            <li><a href="{% url 'contact' %}?page=5">Контакти</a></li>
         {% endif %}
         {% if page == 6 %}
-            <li><a href="{% url 'project' %}?page=6" style="border-bottom: 1px solid #fff">Projekty</a></li>
+            <li><a href="{% url 'project' %}?page=6" style="border-bottom: 1px solid #fff">Проєкти</a></li>
         {% else %}
-            <li><a href="{% url 'project' %}?page=6">Projekty</a></li>
+            <li><a href="{% url 'project' %}?page=6">Проєкти</a></li>
         {% endif %}
     </ul>
 
@@ -42,7 +42,7 @@
         <ul class="main">
             <li>
                 <a href="#" class="contact-item">
-                    <i class="fas fa-phone"></i> Masz pytanie?
+                    <i class="fas fa-phone"></i> Є запитання?
                 </a>
             </li>
             <li>
@@ -81,8 +81,8 @@
     </div>
 
     <ul class="sub">
-        <li><a href="#0">FAQ &amp; Shipping</a></li>
-        <li><a href="#0">Terms &amp; Conditions</a></li>
+        <li><a href="#0">Поширені запитання та доставка</a></li>
+        <li><a href="#0">Умови та положення</a></li>
     </ul>
 </div>
 
