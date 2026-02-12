@@ -1,0 +1,114 @@
+{% load static %}
+<section class="Why_us">
+    <div class="Why_us_title">Чому ми?</div>
+    <div class="Why_us_block">
+        <div class="Why_us_block_too error_dispay_img">
+            <div class="Why_us_block_left">
+                <div class="Why_us_block_text hidden">
+                    <div class="Why_us_block_text_count">01</div>
+                    <div class="Why_us_block_text_right_block">
+                        <div class="Why_us_block_text_right_block_title">Професіоналізм і досвід</div>
+                        <div class="Why_us_block_text_right_block_text">
+                            Багаторічний досвід роботи, більше 7000 задоволених клієнтів, більше 500.000 м2 готової продукції.
+                        </div>
+                    </div>
+                </div>
+                <div class="Why_us_block_text hidden">
+                    <div class="Why_us_block_text_count">02</div>
+                    <div class="Why_us_block_text_right_block">
+                        <div class="Why_us_block_text_right_block_title">2.	Сучасні технології</div>
+                        <div class="Why_us_block_text_right_block_text">
+                            Власне виробництво гранітних виробів оснащене високотехнологічним обладнанням.
+                        </div>
+                    </div>
+                </div>
+                <div class="Why_us_block_text hidden">
+                    <div class="Why_us_block_text_count">03</div>
+                    <div class="Why_us_block_text_right_block">
+                        <div class="Why_us_block_text_right_block_title">3.	Висока якість продукції</div>
+                        <div class="Why_us_block_text_right_block_text">
+                             Контроль якості на всіх етапах виробництва. 
+                        </div>
+                    </div>
+                </div>
+                <div class="Why_us_block_text hidden">
+                    <div class="Why_us_block_text_count">04</div>
+                    <div class="Why_us_block_text_right_block">
+                        <div class="Why_us_block_text_right_block_title">Індивідуальний підхід</div>
+                        <div class="Why_us_block_text_right_block_text">
+                             Постійна наявність на складі основних видів продукції, що дозволяє оперативно реагувати на потреби наших клієнтів.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Why_us_block_right">
+                <img src="{% static '/mysite/img/index/Why_us/2.png' %}" alt="Error_img"/>
+            </div>
+        </div>
+        <div class="Why_us_block_too error_dispay_img_2">
+            <div class="Why_us_block_left">
+                <img src="{% static '/mysite/img/index/Why_us/1.png' %}" alt="Error_img"/>
+            </div>
+            <div class="Why_us_block_right">
+                <div class="Why_us_block_text">
+                    <div class="Why_us_block_text_count">05</div>
+                    <div class="Why_us_block_text_right_block">
+                        <div class="Why_us_block_text_right_block_title">5.	Точність і своєчасність</div>
+                        <div class="Why_us_block_text_right_block_text">
+                            Виготовлення продукції вчасно у встановлений замовником строк.
+                        </div>
+                    </div>
+                </div>
+                <div class="Why_us_block_text">
+                    <div class="Why_us_block_text_count">06</div>
+                    <div class="Why_us_block_text_right_block">
+                        <div class="Why_us_block_text_right_block_title">6.	Широкий спектр послуг</div>
+                        <div class="Why_us_block_text_right_block_text">
+                            Безкоштовні консультації, гнучка система знижок Організація доставки готової продукції по Україні і за кордон.
+                        </div>
+                    </div>
+                </div>
+                <div class="Why_us_block_text">
+                    <div class="Why_us_block_text_count">07</div>
+                    <div class="Why_us_block_text_right_block">
+                        <div class="Why_us_block_text_right_block_title">7.	Підтримка та консультування</div>
+                        <div class="Why_us_block_text_right_block_text">
+                            Супровід Вашого замовлення на всіх етапах, від проекту та виробництва і до укладки.
+                        </div>
+                    </div>
+                </div>
+{#                <div class="Why_us_block_text">#}
+{#                    <div class="Why_us_block_text_count">08</div>#}
+{#                    <div class="Why_us_block_text_right_block">#}
+{#                        <div class="Why_us_block_text_right_block_title">Konkurencyjne Ceny</div>#}
+{#                        <div class="Why_us_block_text_right_block_text">Пропонуємо конкурентні ціни за високоякісні послуги.#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var elements = document.querySelectorAll(".Why_us_block_text");
+
+        function checkVisibility() {
+            elements.forEach(function (element) {
+                var rect = element.getBoundingClientRect();
+                var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+                // Sprawdzanie, czy element jest widoczny na ekranie
+                if (rect.top <= windowHeight && rect.bottom >= 0) {
+                    element.classList.add("visible"); // Додаємо клас для анімації
+                } else {
+                    element.classList.remove("visible"); // Прибираємо клас, якщо елемент не видимий
+                }
+            });
+        }
+
+        // Додаємо слухач події прокручування
+        window.addEventListener("scroll", checkVisibility);
+        checkVisibility(); // Перевіряємо одразу, якщо елемент вже видимий
+    });
+</script>

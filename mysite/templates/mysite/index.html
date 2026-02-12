@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="uk">
+{% load static %}
+<head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <!-- Lightbox2 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'mysite/css/main/default.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/main/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/element/navbar.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/element/navbar_burger.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/element/header.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/element/Cookie.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/index/index_katalog.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/index/index_katalog_galerea.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/index/index_galerea_kamin.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/index/index_video-container.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/index/index_our_advantages.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/index/index__Why_us.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/index/index_Examples_of_applications.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/element/Feedback_form.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/element/Footer.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/contact/contact_top.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/contact/contact_bot.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/production/_1_header_production.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/production/_2_osnov_text.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/production/_3_achievement.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/project/_2_cart_galerea.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/catalog/1_catalog_plate.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/catalog/2_catalog_text.css' %}"/>
+    <link rel="stylesheet" href="{% static 'mysite/css/_product.css' %}"/>
+</head>
+<body>
+<div class="container_body1">
+    {% include 'element/navbar/navbar.html' %}
+    <main>
+        {% if request.resolver_match.url_name == 'index' %}
+            {% include 'inc/_index/_0_main_index.html' %}
+        {% elif request.resolver_match.url_name == 'contact' %}
+            {% include 'inc/_contact/_0_main_contact.html' %}
+        {% elif request.resolver_match.url_name == 'production' %}
+            {% include 'inc/_production/_0_main_production.html' %}
+        {% elif request.resolver_match.url_name == 'Delivery_and_payment' %}
+            {% include 'inc/Delivery_and_payment/_0_main_delivery_and_payment.html' %}
+        {% elif request.resolver_match.url_name == 'project' %}
+            {% include 'inc/_project/_0_main_project.html' %}
+        {% elif request.resolver_match.url_name == 'catalog' %}
+            {% include 'inc/_catalog/_0_main_catalog.html' %}
+        {% elif request.resolver_match.url_name == 'Product_card' %}
+            {% include 'inc/_product/_product.html' %}
+        {% elif request.resolver_match.url_name == 'cookie' %}
+            {% include 'inc/_cookie.html' %}
+        {% endif %}
+
+    </main>
+    {% include 'element/Cookie.html' %}
+    {% include 'element/Footer.html' %}
+</div>
+</body>
+<script>
+    const cookieConsent = {
+        preferences: {
+            essential: true,
+            analytics: false,
+            marketing: false,
+            functional: false
+        },
+
+        init() {
+            // Перевір, чи користувач уже обрав налаштування
+            const saved = localStorage.getItem('cookieConsent');
+            if (saved) {
+                this.preferences = JSON.parse(saved);
+                this.hideBanner();
+                this.applyPreferences();
+            }
+        },
+
+        showBanner() {
+            document.getElementById('cookieBanner').classList.remove('hidden');
+        },
+
+        hideBanner() {
+            document.getElementById('cookieBanner').classList.add('hidden');
+        },
+
+        openSettings() {
+            this.updateToggleStates();
+            document.getElementById('cookieModal').classList.add('active');
+        },
+
+        closeSettings() {
+            document.getElementById('cookieModal').classList.remove('active');
+        },
+
+        toggleCategory(category) {
+            this.preferences[category] = !this.preferences[category];
+            this.updateToggleUI(category);
+        },
+
+        updateToggleUI(category) {
+            const toggle = document.getElementById(category + 'Toggle');
+            const status = document.getElementById(category + 'Status');
+            
+            if (this.preferences[category]) {
+                toggle.classList.add('active');
+                status.textContent = 'Увімкнено';
+            } else {
+                toggle.classList.remove('active');
+                status.textContent = 'Вимкнено';
+            }
+        },
+
+        updateToggleStates() {
+            ['analytics', 'marketing', 'functional'].forEach(cat => {
+                this.updateToggleUI(cat);
+            });
+        },
+
+        acceptAll() {
+            this.preferences = {
+                essential: true,
+                analytics: true,
+                marketing: true,
+                functional: true
+            };
+            this.saveToStorage();
+            this.hideBanner();
+            this.closeSettings();
+            this.applyPreferences();
+            console.log('Усі cookies прийнято');
+        },
+
+        rejectNonEssential() {
+            this.preferences = {
+                essential: true,
+                analytics: false,
+                marketing: false,
+                functional: false
+            };
+            this.saveToStorage();
+            this.hideBanner();
+            this.closeSettings();
+            this.applyPreferences();
+            console.log('Відхилено необов’язкові cookies');
+        },
+
+        savePreferences() {
+            this.saveToStorage();
+            this.hideBanner();
+            this.closeSettings();
+            this.applyPreferences();
+            console.log('Налаштування збережено:', this.preferences);
+        },
+
+        saveToStorage() {
+            localStorage.setItem('cookieConsent', JSON.stringify(this.preferences));
+            localStorage.setItem('cookieConsentDate', new Date().toISOString());
+        },
+
+        applyPreferences() {
+            // Тут додайте код для увімкнення/вимкнення зовнішніх скриптів
+            // наприклад, Google Analytics, Facebook Pixel тощо.
+            
+            if (this.preferences.analytics) {
+                this.enableAnalytics();
+            } else {
+                this.disableAnalytics();
+            }
+
+            if (this.preferences.marketing) {
+                this.enableMarketing();
+            } else {
+                this.disableMarketing();
+            }
+
+            if (this.preferences.functional) {
+                this.enableFunctional();
+            } else {
+                this.disableFunctional();
+            }
+        },
+
+        // Функції для реалізації — увімкнення/вимкнення конкретних скриптів
+        enableAnalytics() {
+            // Увімкніть Google Analytics, Hotjar тощо.
+            console.log('Аналітику увімкнено');
+            // Приклад: gtag('consent', 'update', {'analytics_storage': 'granted'});
+        },
+
+        disableAnalytics() {
+            // Вимкніть аналітику
+            console.log('Аналітику вимкнено');
+            // Приклад: gtag('consent', 'update', {'analytics_storage': 'denied'});
+        },
+
+        enableMarketing() {
+            console.log('Маркетинг увімкнено');
+            // Приклад: gtag('consent', 'update', {'ad_storage': 'granted'});
+        },
+
+        disableMarketing() {
+            console.log('Маркетинг вимкнено');
+            // Приклад: gtag('consent', 'update', {'ad_storage': 'denied'});
+        },
+
+        enableFunctional() {
+            console.log('Функціональні увімкнено');
+        },
+
+        disableFunctional() {
+            console.log('Функціональні вимкнено');
+        }
+    };
+
+    // Ініціалізація після завантаження сторінки
+    document.addEventListener('DOMContentLoaded', () => {
+        cookieConsent.init();
+    });
+
+    // Закриття модального вікна клавішею ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            cookieConsent.closeSettings();
+        }
+    });
+
+    // Закриття модального вікна після кліку поза ним
+    document.getElementById('cookieModal').addEventListener('click', (e) => {
+        if (e.target.id === 'cookieModal') {
+            cookieConsent.closeSettings();
+        }
+    });
+</script>
+</html>

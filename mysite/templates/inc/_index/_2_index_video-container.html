@@ -1,0 +1,52 @@
+{% load static %}
+<section class="video-block_index">
+    <div class="video-overlay">
+        <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata"
+               poster="{% static 'mysite/img/content/main/logo.png' %}">
+            <source src="{% static 'mysite/img/content/video/v1.mp4' %}" type="video/mp4">
+            Ваш браузер не підтримує тег відео.
+        </video>
+        <div class="video-content">
+            <h2 class="video-title">GARANT - BUD</h2>
+            <p class="video-description" style="margin-bottom: 30px">Ми пропонуємо широкий асортимент продукції для
+                будівництва та архітектури з гранітів українських родовищ як зі складу, так і під індивідуальне
+                замовлення:</p>
+            <p class="video-description">
+                •	Гранітна бруківка<br>
+                •	Гранітна плитка для мощення та облицювання<br>
+                •	Гранітні накривні плита та смуги різної ширини<br>
+                •	Гранітні бордюри<br>
+                •	Гранітні підвіконня, стільниці, сходинки
+
+            </p>
+        </div>
+    </div>
+</section>
+<script>ё
+    (function () {
+        var video = document.querySelector('.video-block_index .hero-video');
+        var overlay = document.querySelector('.video-block_index .video-overlay');
+
+        if (!video || !overlay) {
+            return;
+        }
+
+        function setFallbackState() {
+            overlay.classList.add('video-fallback');
+            video.pause();
+            video.removeAttribute('autoplay');
+        }
+
+        var playPromise = video.play();
+
+        if (playPromise && typeof playPromise.then === 'function') {
+            playPromise.then(function () {
+                overlay.classList.remove('video-fallback');
+            }).catch(function () {
+                setFallbackState();
+            });
+        }
+
+        video.addEventListener('error', setFallbackState);
+    })();
+</script>
