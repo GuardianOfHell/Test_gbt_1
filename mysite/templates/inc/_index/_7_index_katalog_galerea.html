@@ -60,10 +60,16 @@
             return;
         }
 
-        var x = sliderItem.getBoundingClientRect().left + window.scrollX;
-        var y = sliderItem.getBoundingClientRect().top + window.scrollY;
-        var width = sliderItem.getBoundingClientRect().width;
-        var height = sliderItem.getBoundingClientRect().height;
+        var wrapper = document.querySelector('.wrapper_tooler');
+        if (!wrapper) return;
+
+        var sliderRect = sliderItem.getBoundingClientRect();
+        var wrapperRect = wrapper.getBoundingClientRect();
+
+        var x = sliderRect.left - wrapperRect.left;
+        var y = sliderRect.top - wrapperRect.top;
+        var width = sliderRect.width;
+        var height = sliderRect.height;
 
         bg.style.width = width + 'px';
         bg.style.height = height + 'px';
